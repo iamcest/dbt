@@ -1,0 +1,47 @@
+
+
+<ion-view title="Situaciones especiales" id="page7">
+
+    <div class="bar bar-subheader cal-4">
+        <h2 class="title blanco">Insuficiencia renal</h2>
+    </div>
+
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <div class="card" style="margin: 10px;">
+            <div class="item item-divider item-icon-left">
+                <i class="icon ion-ios-help-outline"></i>
+                Consultas
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-4')"class="item item-text-wrap">
+                Pronóstico de la enfermedad renal crónica en función del índice de filtrado glomerular y la albuminuria
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-5')"class="item item-text-wrap">
+                Intervenciones en el paciente con nefropatía diabética
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-6')"class="item item-text-wrap">
+                Recomendaciones de uso de metformina en pacientes diabéticos con insuficiencia renal
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-7')"class="item item-text-wrap">
+                Ajustes de los fármacos antidiabéticos según la función renal del paciente, de acuerdo con la ficha técnica
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-16')"class="item item-text-wrap">
+                Manejo de la meftormina en diabéticos sometidos a estudios con contrastes yodados
+            </div>
+            
+        </div>
+        
+        <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2" ui-sref="menu.04-01">CONTINUAR</a>
+            </div>
+        </div>
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+    </ion-content>
+
+
+</ion-view>

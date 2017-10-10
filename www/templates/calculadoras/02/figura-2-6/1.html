@@ -1,0 +1,92 @@
+
+
+<ion-view title="Objetivo y control global" id="page7">
+
+    <div class="bar bar-subheader cal-2">
+        <h2 class="title blanco">Control de la PA</h2>
+    </div>
+
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <div class="titulo-cal" style="text-align: center">Selección del tratamiento antihipertensivo en el paciente diabético</div>
+
+        <div class="calculadora-menu cal-2" style="text-align: center">Adecuación del estilo de vida</div>
+
+        <div class="card">
+            <div class="item item-divider " style="text-align: center !important;">
+                Objetivo PAS <140 mmHg y PAD <85 mmHg <br>PAS <130 mmHg si proteinuria y tratamiento bien tolerado
+            </div>
+            <ul class="list" style="margin-bottom: 0px;">
+
+                <li class="item item-toggle item-checkbox1">
+                    IECA o ARA II
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f2_6_1" ng-change="updateStorage(); cf2_6_1(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle item-checkbox1">
+                    <b>Si PA inicial >160/100 mmHg</b><br>Comenzar con 2 fármacos<br>IECA o ARA II + Antagoinistas del calcio, Diuréticos (tiazida), Beta-bloqueantes
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f2_6_2" ng-change="updateStorage(); cf2_6_2(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="card" ng-show="f2_6_1 == true || f2_6_2 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                ¿Fuera de objetivo (2-3 meses)?
+            </div>
+            <div class="button-bar" style="padding: 10px;">
+                <a class="button button-calm button2"  ng-show="f2_6_3 != false" ng-click="updateStorage(); cf2_6_3(); recalcular()">Sí</a>
+                <a class="button button-balanced button2" ng-show="f2_6_no != false" ng-click="updateStorage(); cf2_6_no(); recalcular()">NO</a>
+            </div>
+        </div>
+        <div class="card" ng-show="f2_6_3 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                Añadir antagonistas del calcio, tiazidas o beta-bloqueantes.<br>¿Fuera de objetivo (2-3 meses)?
+            </div>
+            <div class="button-bar" style="padding: 10px;">
+                <a class="button button-calm button2" ng-show="f2_6_1_si != false" ng-click="updateStorage(); cf2_6_1_si(); recalcular()">Sí</a>
+                <a class="button button-balanced button2" ng-show="f2_6_1_no != false" ng-click="updateStorage(); cf2_6_1_no(); recalcular()">NO</a>
+            </div>
+        </div>
+        <div class="card" class="card" ng-show="f2_6_1_si == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                Añadir el siguiente fármaco (de los previos).<br>¿Fuera de objetivo (2-3 meses)?
+            </div>
+            <div class="button-bar" style="padding: 10px;">
+                <a class="button button-calm button2"  ng-show="f2_6_2_si != false" ng-click="updateStorage(); cf2_6_2_si(); recalcular()">Sí</a>
+                <a class="button button-balanced button2" ng-show="f2_6_2_no != false" ng-click="updateStorage(); cf2_6_2_no(); recalcular()">NO</a>
+            </div>
+        </div>
+        <div class="card" class="card" ng-show="f2_6_2_si == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                Añadir alfa-bloqueantes, ARM, vasodilatadores, agentes centrales, etc.
+            </div>
+        </div>
+
+        <div class="card" class="table-bordered" ng-show="f2_6_no == true || f2_6_1_no == true || f2_6_2_no == true || f2_6_2_si == true">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2" ng-click="myGoBack()">FINALIZAR</a>
+            </div>
+        </div>
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+
+
+
+    </ion-content>
+
+
+</ion-view>

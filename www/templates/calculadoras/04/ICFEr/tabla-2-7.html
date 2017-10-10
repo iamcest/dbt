@@ -1,0 +1,92 @@
+<ion-view title="IC aguda" id="page7" style="background-color:  #EEEEEE;">
+
+    <div class="bar bar-subheader cal-2">
+        <h2 class="title blanco">Titulación ARA II</h2>
+    </div>
+
+    <ion-content>
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+
+        <table class="table table-bordered table-striped" ng-controller="testCtrl">
+
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th>ARA II</th>
+                    <th>Dosis inicio (mg)</th>
+                    <th>Dosis objetivo (mg)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Candesartán</td>
+                <td>4-8 mg/24 h</td>
+                <td>32 mg/24 h</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Candesartan" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Valsartán</td>
+                <td>40 mg/12 h</td>
+                <td>160 mg/12 h</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Valsartan" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Losartán</td>
+                <td>25-50 mg/24 h</td>
+                <td>20-35 mg/24 h</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Losartan" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <!-- ARA II -->
+        <table class="table table-bordered table-striped">
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th colspan="2"><b>ARA II</b></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Contraindicaciones</td>
+                <td>
+            <li>Hipersensibilidad a ARA II.
+            <li>Insuficiencia hepática grave / cirrosis biliar y colectasis (obstrucción biliar). 
+            <li>Angioedema hereditario / Estenosis bilateral arteria renal
+            <li>Segundo / tercer mes de embarazo y lactancia
+            </li>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="button-bar" style="padding: 10px;">
+            <a  class="button button-calm button2"  ng-controller="testCtrl" ng-click="myGoBack()">CONTINUAR</a>
+        </div>
+
+
+
+    </ion-content>
+
+
+</ion-view>

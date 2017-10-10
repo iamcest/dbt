@@ -1,0 +1,118 @@
+<ion-view title="IC aguda" id="page7" style="background-color:  #EEEEEE;">
+
+    <div class="bar bar-subheader cal-2">
+        <h2 class="title blanco">Titulación IECA</h2>
+    </div>
+
+
+    <ion-content>
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <!-- IECA -->
+        <table class="table table-bordered table-striped" ng-controller="testCtrl">
+
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th>IECA</th>
+                    <th>Dosis inicio (mg)</th>
+                    <th>Dosis objetivo (mg)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Captopril</td>
+                <td>6.25 mg/8 h</td>
+                <td>50 mg/8 h</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Captopril" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Enalapril</td>
+                <td>2,5 mg/12 h</td>
+                <td>10-20 mg/12 h</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Enalapril" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Lisinopril</td>
+                <td>2,5-5 mg/24 h</td>
+                <td>20-35 mg/24 h</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Lisinopril" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Ramipril</td>
+                <td>2,5 mg/24 h</td>
+                <td>5 mg/12 h<br>10 mg/24 h</td>
+                <td><label class="toggle toggle-calm" >
+                        <input type="checkbox" ng-model="Ramipril" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Trandopril</td>
+                <td>0,5 mg/24 h</td>
+                <td>4 mg/24 h</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Trandopril" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+
+
+            </tbody>
+        </table>
+
+        <!-- IECA -->
+        <table class="table table-bordered table-striped">
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th colspan="2"><b>IECA</b></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Contraindicaciones</td>
+                <td>
+            <li>Hipersensibilidad o tos por IECA
+            <li>Estenosis bilateral de la arteria renal
+            <li>Edema angioneurótico hereditario
+            <li>Segundo / tercer mes de embarazo y lactancia</li>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="button-bar" style="padding: 10px;">
+            <a  class="button button-calm button2"  ng-controller="testCtrl" ng-click="myGoBack()">CONTINUAR</a>
+        </div>
+
+
+
+
+    </ion-content>
+
+
+</ion-view>

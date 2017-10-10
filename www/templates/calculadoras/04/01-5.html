@@ -1,0 +1,37 @@
+
+
+<ion-view title="Situaciones especiales" id="page7">
+
+    <div class="bar bar-subheader cal-4">
+        <h2 class="title blanco">Intervenciones</h2>
+    </div>
+
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <div class="card" style="margin: 10px;">
+            <div class="item item-divider item-icon-left">
+                <i class="icon ion-ios-help-outline"></i>
+                Consultas
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-17')"class="item item-text-wrap">
+                Recomendaciones para el manejo perioperatorio del paciente diabético
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-18')"class="item item-text-wrap">
+                Ajuste del tratamiento con insulina en pacientes en tratamiento con corticoides
+            </div>
+        </div>
+
+
+        <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2" ng-click="myGoBack()">CONTINUAR</a>
+            </div>
+        </div>
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+    </ion-content>
+
+
+</ion-view>

@@ -1,0 +1,89 @@
+<ion-view title="IC aguda" id="page7" style="background-color:  #EEEEEE;">
+
+    <div class="bar bar-subheader cal-3">
+        <h2 class="title blanco">Diurético tiazídico</h2>
+    </div>
+
+
+    <ion-content>
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+
+        <table class="table table-bordered table-striped" ng-controller="testCtrl">
+
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th>Diurético tiazídico</th>
+                    <th>Dosis de inicio</th>
+                    <th>Dosis diaria</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Hidroclorotiazida</td>
+                <td>25 mg/día</td>
+                <td>12,5-100 mg/día</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Hidroclorotiazida" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Metolazona</td>
+                <td>2,5 mg/día</td>
+                <td>2,5-10 mg/día</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Metolazona" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Indapamida</td>
+                <td>2,5 mg/día</td>
+                <td>2,5-5 mg/día</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Indapamida" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <table class="table table-bordered table-striped">
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th colspan="2"><b>Diurético tiazídico</b></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Contraindicaciones</td>
+                <td>
+            <li>Alergia. 
+            <li>Insuficiencia renal (AlCr<30 ml/min) / Anuria
+            <li>Hipocalemia, hiponatremia, hipercalcemia
+            </li>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="button-bar" style="padding: 10px;">
+            <a  class="button button-calm button2"  ng-controller="testCtrl" ng-click="myGoBack()">CONTINUAR</a>
+        </div>
+
+    </ion-content>
+
+
+</ion-view>

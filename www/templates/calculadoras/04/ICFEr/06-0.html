@@ -1,0 +1,89 @@
+<ion-view title="Situaciones especiales" id="page6">
+
+    <div class="bar bar-subheader cal-4">
+        <h2 class="title blanco">Insuficiencia cardiaca</h2>
+    </div>
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="verControler">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+
+        <div class="card" ng-controller="testCtrl">
+            <div >
+                <table class="table table-bordered table-striped" >
+                    <tbody>
+                        <tr>
+                            <td style="font-size: 16px;">Considerar digoxina o hidralazina + DIS o DAVI, o trasplante cardiaco.</td>
+                            <td><label class="toggle toggle-calm">
+                                    <input type="checkbox" ng-model="digoxina" ng-change="updateStorage()">
+                                    <div class="track">
+                                        <div class="handle"></div>
+                                    </div>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="card" ng-show="digoxina == true">
+
+                        <table class="table table-bordered table-striped">
+                            <tbody>
+                            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                                <tr>
+                                    <th>Titulación digoxina</th>
+                                    <th>Dosis inicio (mg)</th>
+                                    <th>Dosis diaria (mg)</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>Digoxina</td>
+                                <td>0,75-1,5 mg/día</td>
+                                <td>0,25 mg/día</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    <div class="item item-divider item-icon-left">
+                        <i class="icon ion-ios-help-outline"></i>
+                        Consultas
+                    </div>
+
+                    <div ng-controller="modalesVentanas" class="item item-text-wrap" ng-click="openModal('ctabla-2-19')">
+                        Recomendaciones de uso de digoxina en ICFEr
+                    </div>
+
+                    <div ng-controller="modalesVentanas" class="item item-text-wrap" ng-click="openModal('ctabla-3-18')">
+                        Descripción de las indicaciones de soporte mecánico circulatorio
+                    </div>
+                    <div ng-controller="modalesVentanas" class="item item-text-wrap" ng-click="openModal('ctabla-3-24')">
+                        Clasificación de pacientes con insuficiencia cardiaca aguda según la escala INTERMACS (Interagency Registry for Mechanically Assisted Circulatory Support)
+                    </div>
+                    <div ng-controller="modalesVentanas" class="item item-text-wrap" ng-click="openModal('ctabla-3-25')">
+                        Pacientes potencialmente seleccionables para el implante de un dispositivo de asistencia ventricular izquierda
+                    </div>
+                    <div ng-controller="modalesVentanas" class="item item-text-wrap" ng-click="openModal('ctabla-3-26')">
+                        Recomendaciones para el implante de soporte mecánico circulatorio en pacientes con insuficiencia cardiaca refractaria
+                    </div>
+                    <div ng-controller="modalesVentanas" class="item item-text-wrap" ng-click="openModal('ctabla-3-28')">
+                        Indicaciones para el trasplante cardiaco
+                    </div>
+                    <div ng-controller="modalesVentanas" class="item item-text-wrap" ng-click="openModal('ctabla-3-27')">
+                        Contraindicaciones para el trasplante cardiaco
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="button-bar" style="padding: 10px;">
+            <a class="button button-calm button2" ui-sref="menu.2-icfer-06-1" >Continuar</a>
+        </div>
+
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+    </ion-content>
+
+
+</ion-view>
+

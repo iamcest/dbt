@@ -1,0 +1,138 @@
+<ion-view title="Diagnóstico. Gestión integral" id="page7" style="background-color:  #EEEEEE;">
+
+    <div class="bar bar-subheader cal-1">
+        <h2 class="title blanco">Diagnóstico de la diabetes</h2>
+    </div>
+
+
+    <ion-content ng-controller="testCtrl">
+        
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <div class="titulo-cal" style="text-align: center">Paciente asintomático<br><br>Criterios para realizar un test de screening de diabetes o prediabetes en adultos asintomáticos</div>
+        
+       <div class="titulo-acordeon" style="background-color: #E63400 !important" >El screening debería ser considerado en adultos con sobrepeso u obesidad (IMC ≥25 kg/m2 o ≥23 kg/m2 en asiáticos americanos) que tienen uno o más de los siguientes factores de riesgo:</div> 
+
+       <ul class="list" style="margin-bottom: 0px;">
+
+            <li class="item item-toggle item-checkbox1">
+                HbA1c ≥5.7% (39 mmoL/mmoL), IGT o IFG en pruebas previas
+                <label class="toggle toggle-calm">
+                    <input type="checkbox" ng-model="t1_3_1" ng-change="updateStorage();">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-toggle item-checkbox1">
+                Pacientes de primer grado con diabetes
+                <label class="toggle toggle-calm">
+                    <input type="checkbox" ng-model="t1_3_2" ng-change="updateStorage();">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-toggle item-checkbox1">
+                Raza o etnia de alto riesgo (ej, afroamericano, latino, nativo americano, asiático americano, isleño del pacífico)
+                <label class="toggle toggle-calm">
+                    <input type="checkbox" ng-model="t1_3_3" ng-change="updateStorage();">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-toggle item-checkbox1">
+                Mujeres que fueron diagnosticadas de diabetes gestacional
+                <label class="toggle toggle-calm">
+                    <input type="checkbox" ng-model="t1_3_4" ng-change="updateStorage();">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-toggle item-checkbox1">
+                Historia de enfermedad cardiovascular
+                <label class="toggle toggle-calm">
+                    <input type="checkbox" ng-model="t1_3_5" ng-change="updateStorage();">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-toggle item-checkbox1">
+                HTA (≥ 140/90 mmHg o en tratamiento)
+                <label class="toggle toggle-calm">
+                    <input type="checkbox" ng-model="t1_3_6" ng-change="updateStorage();">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-toggle item-checkbox1">
+                Nivel de cHDL <35 mg/dL (0,90 mmoL/L) y/o un nivel de triglicéridos >250 mg/dL (2,82 mmoL/L)
+                <label class="toggle toggle-calm">
+                    <input type="checkbox" ng-model="t1_3_7" ng-change="updateStorage();">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-toggle item-checkbox1">
+                Mujeres con síndrome de ovario poliquístico
+                <label class="toggle toggle-calm">
+                    <input type="checkbox" ng-model="t1_3_8" ng-change="updateStorage();">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-toggle item-checkbox1">
+                Inactividad física
+                <label class="toggle toggle-calm">
+                    <input type="checkbox" ng-model="t1_3_9" ng-change="updateStorage();">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-toggle item-checkbox1">
+                Otras condiciones clínicas asociadas con la resistencia a la insulina (por ejemplo, obesidad severa, acantosis Nigricans).
+                <label class="toggle toggle-calm">
+                    <input type="checkbox" ng-model="t1_3_10" ng-change="updateStorage();">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+
+        </ul>
+
+           
+        <div class="card">
+            <div class="item item-text-wrap">
+                Para todos los pacientes, el screening debería comenzar a los 45 años.
+            </div>
+            <div class="item item-text-wrap">
+                Si los resultados son normales, el screening deben repetirse con un intervalo de 3 años como mínimo, considerándolo con más frecuencia en función de los resultados iniciales (ej. aquellos con prediabetes deberían ser analizados anualmente) y el estado de riesgo.
+            </div>
+        </div>
+            
+            
+        <div class="card">
+            <div class="item item-text-wrap">
+                <h3>Adaptada de Diabetes Care. 2017;40(Suppl. 1):S11-S24.</h3>
+            </div>
+        </div>
+
+        <div class="button-bar" style="padding: 10px;">
+            <a  class="button button-calm button2" ui-sref="menu.01-02">CONTINUAR</a>
+        </div>
+
+
+
+
+    </ion-content>
+
+
+</ion-view>

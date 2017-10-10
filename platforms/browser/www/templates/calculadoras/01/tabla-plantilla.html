@@ -1,0 +1,31 @@
+<ion-modal-view id="modal-grande">
+
+    <ion-header-bar class="bar bar-calm">
+        <h1 class="title">{{titulo}}</h1>
+        <button class="button button-icon icon-left ion-ios-close-outline button-primary" ng-click="closeModal()"></button>
+    </ion-header-bar>
+
+    <ion-content style="background-color:  #EEEEEE;">
+
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+
+        <div class="texto-cal" style="text-align: center"><b>{{titulolargo}}</b> </div>
+
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+
+
+        <ion-scroll zooming="true" direction="xy" min-zoom="1" style="margin-left: 20px; margin-right: 20px;">
+            <div style="text-align: center;"><img style="width: 100%" ng-src="img/{{imagen}}"></div>
+        </ion-scroll>
+
+        <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2"   ng-click="closeModal()">CONTINUAR</a>
+            </div>
+        </div>
+
+
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+
+    </ion-content>
+</ion-modal-view>

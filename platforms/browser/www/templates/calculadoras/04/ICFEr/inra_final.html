@@ -1,0 +1,52 @@
+<div ng-controller="inra">            
+    <div class="item item-divider" ng-if="sacubitrilo1 == true || sacubitrilo2 == true">
+        Tratamiento con Sacubitrilo/valsartán
+    </div>
+    <!-- Tratamiento 1 -->
+    <div ng-controller="testCtrl" ng-if="valor5 == 1">
+        <div class="item item-avatar item-icon-left" style="text-align: left; background-color: #FFDC73;">
+            <i class="icon ion-ios-information-outline"></i>
+            <b>En pacientes en tratamiento con IECA, este debe suspenderse 36 horas antes de iniciarse el tratamiento con sacubitrilo/valsartan, para reducir el riesgo de angioedema.</b>
+        </div>
+        <table class="table table-bordered table-striped" >
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th></th>
+                    <th>Dosis inicio</th>
+                    <th>Dosis objetivo</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Sacubitrilo/<br>valsartan</td>
+                <td>24/26 mg cada 12 horas.</td>
+                <td>Se recomienda una titulación lenta doblando la dosis cada 3-4 semanas hasta alcanzar 97/103 mg cada 12 horas.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Tratamiento 2 -->
+    <div ng-if="valor7 == 1">
+        <div class="item item-avatar item-icon-left" style="text-align: left; background-color: #FFDC73;">
+            <i class="icon ion-ios-information-outline"></i>
+            <b>En pacientes en tratamiento con IECA, este debe suspenderse 36 horas antes de iniciarse el tratamiento con sacubitrilo/valsartan, para reducir el riesgo de angioedema.</b>
+        </div>
+        <table class="table table-bordered table-striped" ng-controller="testCtrl" >
+
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th></th>
+                    <th>Dosis inicio</th>
+                    <th>Dosis objetivo</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Sacubitrilo/<br>valsartan</td>
+                <td>49/51 mg cada 12 horas.</td>
+                <td>97/103 mg cada 12 horas se hará a las 2-4 semanas en función de la tolerabilidad del paciente.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

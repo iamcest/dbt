@@ -1,0 +1,80 @@
+<ion-modal-view id="modal-grande" style="background-color:  #EEEEEE;">
+
+
+
+    <ion-header-bar class="bar bar-calm">
+        <h1 class="title">Titulación ARM</h1>
+        <button class="button button-icon icon-left ion-ios-close-outline button-primary" ng-click="closeModal()"></button>
+    </ion-header-bar>
+
+    <ion-content>
+
+
+        <table class="table table-bordered table-striped" ng-controller="testCtrl">
+
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th>ARM</th>
+                    <th>Dosis inicio (mg)</th>
+                    <th>Dosis objetivo (mg)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Espironolactona</td>
+                <td>25 mg/24 h</td>
+                <td>25-50 mg/24 h</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Espironolactona" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Eplerenona</td>
+                <td>25 mg/24 h</td>
+                <td>25-50 mg/24 h</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Eplerenona" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+
+
+            </tbody>
+        </table>
+
+        <table class="table table-bordered table-striped">
+            <tbody>
+                <tr>
+                    <td>Contraindicaciones</td>
+                    <td>
+            <li>Potasio sérico > 5,0 mmol/L al inicio del tratamiento.
+            <li>Insuficiencia renal moderada a grave (aclaramiento de creatinina < 50 mL/min).
+            <li>Insuficiencia hepática grave (Child-Pugh Clase C).
+            <li>Tratamiento concomitante con diuréticos ahorradores de potasio, suplementos de potasio o con inhibidores potentes del CYP3A4<sup>a</sup>.
+            </li>
+
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2"   ng-click="closeModal()">CONTINUAR</a>
+            </div>
+        </div>
+
+
+
+    </ion-content>
+
+
+</ion-modal-view>

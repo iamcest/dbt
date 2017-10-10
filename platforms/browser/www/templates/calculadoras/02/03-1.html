@@ -1,0 +1,48 @@
+
+
+<ion-view title="Objetivo y control global" id="page7">
+
+    <div class="bar bar-subheader cal-2">
+        <h2 class="title blanco">Control de la PA</h2>
+    </div>
+
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <div class="titulo-cal" style="text-align: center">PA <140/85 mmHg (<130/85 mmHg si nefropatía)</div>
+
+        <div class="card" style="margin: 10px;">
+            <div class="item item-divider item-icon-left">
+                <i class="icon ion-ios-help-outline"></i>
+                Consultas
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-2-16')"class="item item-text-wrap">
+                Estratificación de riesgo de los pacientes hipertensos
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-2-17')"class="item item-text-wrap">
+                Intervención terapéutica para el control de la hipertensión arterial según el riesgo añadido de los pacientes
+            </div>
+            <div ng-click=""  ui-sref="menu.figura-2-6" class="item item-text-wrap titulacion">
+                <i class="icon ion-android-checkmark-circle"></i> Selección del tratamiento antihipertensivo en el paciente diabético
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('figura-2-8')"class="item item-text-wrap">
+                Combinaciones de fármacos antihipertensivos
+            </div>
+        </div>
+
+        <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2" ng-click="myGoBack()">CONTINUAR</a>
+            </div>
+        </div>
+        
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+
+
+
+    </ion-content>
+
+
+</ion-view>

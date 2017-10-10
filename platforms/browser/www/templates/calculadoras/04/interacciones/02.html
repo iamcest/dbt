@@ -1,0 +1,53 @@
+
+
+<ion-view title="Situaciones especiales" id="page7">
+
+    <div class="bar bar-subheader cal-4">
+        <h2 class="title blanco">Interacciones</h2>
+    </div>
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="interaccionesCtrl">
+
+        <div class="spacer" style="width: 300px; height: 70px;"></div>
+
+        <div class="titulo-cal" style="text-align: center">{{nombreCat}}</div>
+
+        <div style="visibility: hidden; margin-top: -50px;">
+            <input type="text" ng-model="id" value='{{id}}'/>
+        </div>
+
+        <div class="card" ng-repeat="detalle in countSelected | filter:{id:id} | limitTo: 1">
+
+            <div class="item item-divider">Fármaco:</div>
+            <div class="item item-text-wrap"><b>{{detalle.name}}</b></div>
+
+            <div class="item item-divider">Mecanismo:</div>
+            <div class="item item-text-wrap"><div ng-bind-html="detalle.mecanismo"></div></div>
+
+            <div class="item item-divider">Efecto clínico potencial:</div>
+            <div class="item item-text-wrap"><div ng-bind-html="detalle.efecto"></div></div>
+
+            <div class="item item-divider">Manejo clínico:</div>
+            <div class="item item-text-wrap"><div ng-bind-html="detalle.manejo"></div></div>
+
+            <div class="item item-divider">Relevancia clínica:</div>
+            <div class="item item-text-wrap" style="text-align: center">
+                <i class="icon {{logo_relevancia}}" style="color: {{detalle.relevancia}}; font-size: 40px;"></i>
+                <div ng-bind-html="detalle.relNombre"></div>
+            </div>
+
+        </div>
+
+        <div class="card" class="table-bordered" ng-controller="testCtrl">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2"  ng-click="myGoBack()">Continuar</a>
+            </div>
+        </div> 
+
+
+        <div class="spacer" style="width: 300px; height: 30px;"></div>
+
+    </ion-content>
+
+
+</ion-view>

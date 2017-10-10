@@ -1,0 +1,86 @@
+<ion-view title="Login" hide-nav-bar="true" id="page6">
+
+    <ion-content padding="true"  class="manual-ios-statusbar-padding" ng-controller="ProtectedController3">
+
+        <div id="logo-login"><img src="img/logo-login.png"><br><img src="img/logo-cardiologia-login.png"></div>
+
+        <hr class="linea-login">
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+        <form id="login-form1" class="list" ng-controller="postController">
+            <h3 class="titulo_login" style="color: #8f8f8f;">Socios</h3>
+            <ion-list id="login-list2">
+                <label class="item item-input-login" id="login-input1">
+                    <input class="input-login" type="text" ng-model="txtUsuario" placeholder="NIF">
+                </label>
+                <label class="item item-input-login" id="login-input2">
+                    <input class="input-login" type="password" ng-model="txtContrasena" placeholder="Contraseña">
+                </label>
+            </ion-list>
+
+            <div class="spacer" style="height: 10px;"></div>
+            <a id="login-button6" style="font-size: 14px; margin-bottom: 0px; margin-top: 0px;" class="button button-stable  button-block button-clear" a onclick="window.open('https://www.diabetappsec.com/templates/terminos.html', '_blank', 'location=yes')">Términos y condiciones</a>
+
+            <div class="spacer" style="height: 0px; "></div>
+
+            <li class="item item-toggle item-checkbox1" style="border: none; padding-left: 0px;">
+                <h5 style="color: #8f8f8f">He leído y acepto los términos y condiciones que rigen el acceso y utilización de la plataforma DIABETapp</h5>
+                <label class="toggle toggle-calm">
+                    <input type="checkbox" ng-model="toggleModel.value1" ng-true-value="1" ng-false-value="0">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+
+            <div class="spacer" style="height: 10px;"></div>
+
+            <a id="login-button5" class="boton-login" ng-click="entrar()" ng-show="toggleModel.value1">Acceder</a>
+            <a id="login-button5" class="boton-login" style="opacity: 0.3;" ng-hide="toggleModel.value1">Acceder</a>
+
+            <a id="login-button6" style="font-size: 14px; margin-bottom: 0px; margin-top: 0px;" class="button button-stable  button-block button-clear"  onclick="window.open('http://socios.secardiologia.es/reset/', '_blank', 'location=yes')">He olvidado mi contraseña</a>
+
+
+            <div class="spacer" style="height: 0px;"></div>
+
+        </form>
+
+        <div class="invitado">
+            <form id="login-invitado" class="list" ng-controller="invitadoController">
+
+                <h3 class="titulo_login">No socios</h3>
+
+                <div class="spacer" style="height: 10px;"></div>
+
+                <ion-list id="login-list2">
+                    <label class="item item-input-invitado" id="login-input1">
+                        <input class="input-invitado" type="text" ng-model="txtInvitado" placeholder="Código de invitado" >
+                    </label>
+                </ion-list>
+                <div class="spacer" style="height: 10px;"></div>
+                <a id="login-button6" style="font-size: 14px; color: white; margin-bottom: 0px; margin-top: 0px;" class="button button-stable  button-block button-clear" onclick="window.open('https://www.diabetappsec.com/templates/terminos.html', '_blank', 'location=yes')">Términos y condiciones</a>
+
+                <div class="spacer" style="height: 0px; "></div>
+
+                <li class="item item-toggle item-checkbox1" style="border: none; padding-left: 0px; background-color:transparent !important;">
+                    <h5 style="color: white">He leído y acepto los términos y condiciones que rigen el acceso y utilización de la plataforma DIABETapp</h5>
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="toggleModel.value2" ng-true-value="1" ng-false-value="0">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+
+                <div class="spacer" style="height: 10px;"></div>
+                <a id="login-button5" class="boton-login" ng-click="entrar1()" ng-show="toggleModel.value2">Acceder</a>
+                <a id="login-button5" class="boton-login" style="opacity: 0.3;" ng-hide="toggleModel.value2">Acceder</a>
+
+            </form>
+
+            <div class="spacer" style="height: 20px;"></div>
+
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,132 @@
+
+
+<ion-view title="Objetivo y control global" id="page7">
+
+    <div class="bar bar-subheader cal-2">
+        <h2 class="title blanco">Estilo de vida</h2>
+    </div>
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <div class="titulo-cal" style="text-align: center">Estrategia para el cese del tabaquismo</div>
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+        <div class="card">
+            <div class="item item-divider " style="text-align: center !important;">
+                <b>A</b>veriguar <br>¿Es usted fumador?
+            </div>
+            <div class="button-bar" style="padding: 10px;">
+                <a class="button button-calm button2"   ng-show="fig_2_3_no != false" ng-click="f2_3_averiguar_no(); recalcular()">No</a>
+                <a class="button button-balanced button2"   ng-show="fig_2_3_si != false" ng-click="f2_3_averiguar_si(); recalcular()">Sí</a>
+            </div>
+        </div>
+        <!-- Es usted fumador? No -->
+        <div class="card" ng-show="fig_2_3_no == true">
+            <div class="item item-text-wrap">
+                Reforzar el mensaje de que el tabaco aumenta el riesgo de enfermedad cardiovascular.
+            </div>
+        </div>
+        <!-- Es usted fumador? Sí -->
+        <div ng-show="fig_2_3_si == true">
+            <div class="card" >
+                <div class="item item-divider " style="text-align: center !important;">
+                    <b>A</b>consejar
+                </div>
+                <div class="item item-text-wrap">
+                    Aconseje dejar de fumar en un modo claro, firme y personalizado
+                </div>
+            </div>
+
+
+            <div class="" style="text-align: center !important; font-size: 20px; margin: -10px;">
+                <i class="icon ion-arrow-down-a"></i>
+            </div>
+
+
+            <div class="card">
+                <div class="item item-divider " style="text-align: center !important; ">
+                    <b>A</b>cordar la intervención
+                </div>
+            </div>
+
+            <div class="" style="text-align: center !important; font-size: 20px; margin: -10px;">
+                <i class="icon ion-arrow-down-a"></i>
+            </div>
+
+            <div class="card">
+                <div class="item item-divider " style="text-align: center !important;">
+                    Planear la estrategia<br>¿Quiere dejar de fumar ahora?
+                </div>
+                <div class="button-bar" style="padding: 10px;">
+                    <a class="button button-calm button2"  ui-sref=""   ng-if="fig_2_3_1_no != false" ng-click="f2_3_dejar_no(); recalcular()">No</a>
+                    <a class="button button-balanced button2" ui-sref=""   ng-if="fig_2_3_1_si != false" ng-click="f2_3_dejar_si(); recalcular()">Sí</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" ng-show="fig_2_3_1_no == true">
+            <div class="item item-text-wrap">
+                Proporcione información sobre los peligros que el tabaco representa para la salud
+            </div>
+        </div>
+
+        <div class="card" ng-show="fig_2_3_1_si == true">
+            <div class="card">
+                <div class="item item-divider " style="text-align: center !important;">
+                    <b>A</b>yudar
+                </div>
+                <div class="item item-text-wrap">
+                    <b>Elaborar un plan para dejar de fumar:</b>
+                    <li>Decidir la fecha de inicio
+                    <li>Informar y pedir ayuda a familia y amigos
+                    <li>Retirar el tabaco
+                    <li>Retirar objetos que inciten a fumar
+                    <li>Introducir <b>tratamiento farmacológico</b> sí precisa
+                    <li>Organizar visitas de seguimiento</li>
+                </div>
+                <div ng-controller="modalesVentanas" ng-click="openModal('tabla-2-8')"class="item item-text-wrap">
+                    Terapia de sustitución con nicotina
+                </div>
+                <div ng-controller="modalesVentanas" ng-click="openModal('tabla-2-9')"class="item item-text-wrap">
+                    Bupropion
+                </div>
+                <div ng-controller="modalesVentanas" ng-click="openModal('tabla-2-10')"class="item item-text-wrap">
+                    Vareniclina
+                </div>
+            </div>
+
+            <div class="" style="text-align: center !important; font-size: 20px; margin: -10px;">
+                <i class="icon ion-arrow-down-a"></i>
+            </div>
+
+            <div class="card">
+                <div class="item item-divider " style="text-align: center !important;">
+                    <b>A</b>compañar
+                </div>
+                <div class="item item-text-wrap">
+                    Planificar el <b>seguimiento del paciente</b>:
+                    <li>Primera visita de control en 1-2 semanas
+                    <li>Segunda visita de control un mes después
+                    <li>Refuerce la conducta reconociendo los logros
+                    <li>Seguimiento intensivo y apoyo familiar ante una eventual recaída</li>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="card" class="table-bordered" ng-if="fig_2_3_1_si == true || fig_2_3_1_no == true || fig_2_3_no == true">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2" ng-click="myGoBack()">FINALIZAR</a>
+            </div>
+        </div>
+
+        <div class="button-bar" style="padding: 10px;" ng-if="fig_2_3_1_si == true || fig_2_3_1_no == true || fig_2_3_no == true">
+            <a class="button button-energized button2" ng-click="f2_3_reset(); scrollTop()">RESET</a>
+        </div>
+
+    </ion-content>
+
+
+</ion-view>

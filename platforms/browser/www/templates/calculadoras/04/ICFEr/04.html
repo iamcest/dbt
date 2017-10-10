@@ -1,0 +1,40 @@
+<ion-view title="Situaciones especiales" id="page6">
+
+    <div class="bar bar-subheader cal-4">
+        <h2 class="title blanco">Insuficiencia cardiaca</h2>
+    </div>
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="verControler">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+        <div class="titulo-cal" style="text-align: center" ng-controller="leyendaCtrl">Añadir <a ng-click="openModal('l')">Ivabradina<sup><i class="icon ion-help-circled"></i></sup></a></div>
+
+        <div class="card">
+            <div class="item item-divider item-icon-left">
+                <i class="icon ion-ios-help-outline"></i>
+                Ivabradina
+            </div>
+            <div ng-controller="modalesVentanas" class="item item-text-wrap" ng-click="openModal('ctabla-2-17')">
+                Recomendaciones de uso de ivabradina en ICFEr
+            </div>
+            <div ng-controller="2-18" class="item item-text-wrap titulacion" ng-click="openModal()">
+                <i class="icon ion-android-checkmark-circle"></i> Titulación ivabradina
+            </div>
+        </div>
+
+        <div class="card">
+            <div  class="item item-divider " style="text-align: center !important;">
+                El paciente sigue "sintomático con FE≤35%" con "RS y FC ≥70 lpm"
+            </div>
+            <div class="button-bar" style="padding: 10px;">
+                <a class="button button-calm button2" ui-sref="menu.2-icfer-05" >SÍ</a>
+                <a class="button button-balanced button2" ui-sref="menu.2-icfer-04-2">NO</a>
+            </div>
+        </div>
+
+
+
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+    </ion-content>
+
+</ion-view>
+

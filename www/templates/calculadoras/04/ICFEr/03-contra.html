@@ -1,0 +1,166 @@
+<ion-modal-view id="modal-grande" style="background-color: #EEEEEE;" >
+
+
+
+    <ion-header-bar class="bar bar-calm">
+        <h1 class="title">Dosis de inicio y Titulación sacubitrilo/valsartan</h1>
+        <button class="button button-icon icon-left ion-ios-close-outline button-primary" ng-click="closeModal()"></button>
+    </ion-header-bar>
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="verControler">
+
+        <div class="card">
+            <table class="table table-bordered table-striped" style="margin-bottom: 0px;">
+
+                <tbody>
+                <thead style="background-color: #B84E00; color: #EEEEEE;">
+                    <tr>
+                        <th>Contraindicaciones para el uso de sacubitrilo/valsartan</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>- Hipersensibilidad al fármaco
+                            <li>- Uso concomitante con IECA<sup>a</sup>
+                            <li>- Uso concomitante con aliskiren en pacientes diabéticos o insuficiencia renal (IFG <60 ml/min/1.73m2)
+                            <li>- Historia de angioedema con IECA o ARA II
+                            <li>- Angioedema hereditario o idiopático
+                            <li>- Insuficiencia hepática grave, cirrosis biliar y colestasis
+
+                            <li>- Segundo y tercer trimestre del embarazo</li>
+                        </ul>
+                    </td>
+
+                </tr>
+                <thead style="background-color: #B84E00; color: #EEEEEE;">
+                    <tr>
+                        <th>
+                            <sup>a</sup> No se debe administrar sacubitrilo/valsartán hasta 36 horas después de la interrupción del tratamiento con IECA.
+                        </th>
+                    </tr>
+                </thead>
+                </tbody>
+            </table>
+        </div>
+        <div ng-controller="inra">
+            <div class="card" >
+                <div  class="item item-divider " style="text-align: center !important;">
+                    ¿Alguna contraindicación?
+                </div>
+                <div class="button-bar" style="padding: 10px;">
+                    <a class="button button-calm button2" ui-sref="menu.2-icfer-04" ng-if="valor1 == 0" ng-click="closeModal()">SÍ</a>
+                    <a class="button button-balanced button2"  ng-if="valor2 == 0" ng-click="verNo()">NO</a>
+                </div>
+            </div>
+
+            <div class="card"  ng-if="valor3 == 1">
+                <div  class="item item-divider " style="text-align: center !important;">
+                    ¿Paciente con potasio >5,4 mEq/L o PAS <100 mmHg?
+                </div>
+                <div class="button-bar" style="padding: 10px;">
+                    <a class="button button-calm button2" ui-sref="menu.2-icfer-04"  ng-if="valor4 == 0" ng-click="closeModal()">SÍ</a>
+                    <a class="button button-balanced button2"   ng-click="verNo1()">NO</a>
+                </div>
+            </div>
+
+            <div class="card"  ng-if="valor4 == 1">
+                <div  class="item item-divider " style="text-align: center !important;" ng-controller="leyendaCtrl">
+                    Paciente con alguna de estas situaciones:<br>
+                    1.	Paciente sin tratamiento previo con IECA o ARA II o <a ng-click="openModal('1')">dosis baja de IECA<sup><i class="icon ion-help-circled"></i></sup></a> o <a ng-click="openModal('2')">ARA II<sup><i class="icon ion-help-circled"></i></sup></a>.<br>
+                    2.	PAS 100-110 mmHg<br>
+                    3.	IR  (IFG < 60 ml/min/1.73m2)<br>
+                    4.	Insuficiencia hepática moderada<br>
+
+                </div>
+                <div class="button-bar" style="padding: 10px;">
+                    <a class="button button-calm button2"  ng-if="valor6 == 0" ng-click="verSi2()">SÍ</a>
+                    <a class="button button-balanced button2"   ng-if="valor8 == 0" ng-click="verNo2()">NO</a>
+                </div>
+            </div>
+            <!-- Tratamiento 1 -->
+            <div ng-controller="testCtrl" ng-if="valor5 == 1">
+                <div class="item item-avatar item-icon-left" style="text-align: left; background-color: #FFDC73;">
+                    <i class="icon ion-ios-information-outline"></i>
+                    <b>En pacientes en tratamiento con IECA, este debe suspenderse 36 horas antes de iniciarse el tratamiento con sacubitrilo/valsartan, para reducir el riesgo de angioedema.</b>
+                </div>
+                <table class="table table-bordered table-striped"  >
+
+                    <tbody>
+                    <thead style="background-color: #B84E00; color: #EEEEEE;">
+                        <tr>
+                            <th></th>
+                            <th>Dosis inicio</th>
+                            <th>Dosis objetivo</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Sacubitrilo/<br>valsartan</td>
+                        <td>24/26 mg cada 12 horas.</td>
+                        <td>Se recomienda una titulación lenta doblando la dosis cada 3-4 semanas hasta alcanzar 97/103 mg cada 12 horas.</td>
+                        <td><label class="toggle toggle-calm">
+                                <input type="checkbox" ng-model="sacubitrilo1" ng-change="updateStorage()">
+                                <div class="track">
+                                    <div class="handle"></div>
+                                </div>
+                            </label>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="button-bar" style="padding: 10px;" >
+                    <a class="button button-calm button2" ng-click="closeModal()">Continuar</a>
+                </div>
+            </div>
+
+            <!-- Tratamiento 2 -->
+            <div ng-if="valor7 == 1">
+                <div class="item item-avatar item-icon-left" style="text-align: left; background-color: #FFDC73;">
+                    <i class="icon ion-ios-information-outline"></i>
+                    <b>En pacientes en tratamiento con IECA, este debe suspenderse 36 horas antes de iniciarse el tratamiento con sacubitrilo/valsartan, para reducir el riesgo de angioedema.</b>
+                </div>
+                <table class="table table-bordered table-striped" ng-controller="testCtrl" >
+
+                    <tbody>
+                    <thead style="background-color: #B84E00; color: #EEEEEE;">
+                        <tr>
+                            <th></th>
+                            <th>Dosis inicio</th>
+                            <th>Dosis objetivo</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Sacubitrilo/<br>valsartan</td>
+                        <td>49/51 mg cada 12 horas.</td>
+                        <td>97/103 mg cada 12 horas se hará a las 2-4 semanas en función de la tolerabilidad del paciente.</td>
+                        <td><label class="toggle toggle-calm">
+                                <input type="checkbox" ng-model="sacubitrilo2" ng-change="updateStorage()">
+                                <div class="track">
+                                    <div class="handle"></div>
+                                </div>
+                            </label>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="button-bar" style="padding: 10px;" >
+                    <a class="button button-calm button2" ng-click="closeModal()">Continuar</a>
+                </div>
+            </div>
+
+            <div class="button-bar" style="padding: 10px;" >
+                <a class="button button-calm button2" ng-click="borrarInra()">RESET datos</a>
+            </div>
+
+            <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+    </ion-content>
+
+</ion-modal-view>
+
+
+
+
+

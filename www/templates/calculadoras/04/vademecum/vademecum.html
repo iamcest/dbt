@@ -1,0 +1,37 @@
+<ion-modal-view id="modal-grande" style="background-color:  #EEEEEE;">
+
+
+
+    <ion-header-bar class="bar bar-calm">
+        <h1 class="title">Vademecum</h1>
+        <button class="button button-icon icon-left ion-ios-close-outline button-primary" ng-click="closeModal()"></button>
+    </ion-header-bar>
+
+    <ion-content ng-controller="vademecumCtrl">
+
+
+        <div class="card" ng-repeat="listado in countVademecum" id="menu-list-item1">
+            <div class="item item-divider">
+                {{listado.nombre}}
+            </div>
+            <div class="item item-text-wrap li-vademecum">
+                Laboratorio: {{listado.company}} <br><br>
+                <span ng-bind-html="listado.contenido"></span><br><br>
+
+                <a ng-click="GotoLink('{{listado.enlace}}')" class="button button-small button-assertive">
+                    Ver detalles en Vademecum.es
+                </a>
+
+            </div>
+        </div>
+
+        <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2"   ng-click="closeModal()">CONTINUAR</a>
+            </div>
+        </div>
+
+    </ion-content>
+
+
+</ion-modal-view>

@@ -1,0 +1,444 @@
+
+
+<ion-view title="Tratamiento antidiabético" id="page7">
+
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+
+        <div class="titulo-cal" style="text-align: center">Inicio y ajuste de la dosis de insulina en pacientes con diabetes mellitus tipo 2</div>
+
+        <div class="calculadora-menu cal-2" style="text-align: center">
+            <b>Iniciar insulina basal</b><br>
+            Por lo general, con metformina ± otro antidiabético no insulínico<br>
+            <b>Inicio:</b> 10 U/día o 0,1-0,2 U/kg/día<br>
+            <b>Ajustar:</b> 10-15 % o 2-4 unidades una o dos veces a la semana para lograr la GB objetivo<br>
+            <b>Para hipoglucemia:</b> determinar y abordar la causa; cuando no exista una causa clara de hipoglucemia, ↓4 unidades o un 10-20 %</div>
+
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+        <div class="card">
+            <div class="item item-divider " style="text-align: center !important;">
+                ¿la HbA<sub>1c</sub> está mal controlada?
+            </div>
+            <div class="button-bar" style="padding: 10px;">
+                <a class="button button-calm button2" ng-show="fig_3_3_no != false" ng-click="f3_3_no(); recalcular()">Sí</a>
+                <a class="button button-balanced button2" ng-show="fig_3_3_si != false" ng-click="f3_3_si(); recalcular()">No</a>
+            </div>
+
+        </div>
+
+        <div class="card" ng-show="fig_3_3_no == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                Considerar un tratamiento inyectable combinado, opciones:
+            </div>
+            <ul class="list" style="margin-bottom: 0px;">
+
+                <li class="item item-toggle item-checkbox1">
+                    Añadir 1 inyección de insulina de acción rápida antes de la comida principal
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_1" ng-change="updateStorage(); cf3_3_1(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle item-checkbox1">
+                    Añadir un aGLP-1
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_2" ng-change="updateStorage(); cf3_3_2(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle item-checkbox1">
+                    Cambiar a insulina premezclada dos veces al día (antes del desayuno y de la cena)
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_3" ng-change="updateStorage(); cf3_3_3(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <!-- Árbol opcion 2 -->
+        <div class="card" ng-show="f3_3_2 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                Añadir un aGLP-1
+            </div>
+            <li class="item item-toggle item-checkbox1">
+                Objetivos logrados
+                <label class="toggle toggle-calm">
+                    <input type="checkbox" ng-model="f3_3_7" ng-change="updateStorage(); cf3_3_7(); recalcular()">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <div class="item item-text-wrap">
+                Si no se tolera o si no se logra la HbA<sub>1c</sub> objetivo, cambiar a una pauta de 2 inyecciones de insulina, opciones:
+            </div>
+
+            <ul class="list" style="margin-bottom: 0px;">
+                <li class="item item-toggle item-checkbox1">
+                    Añadir 1 inyección de insulina de acción rápida antes de la comida principal
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_8" ng-change="updateStorage(); cf3_3_8(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle item-checkbox1">
+                    Cambiar a insulina premezclada dos veces al día (antes del desayuno y de la cena)
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_9" ng-change="updateStorage(); cf3_3_9(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+
+            </ul>
+        </div>
+        <!-- Árbol opcion 1 -->
+        <div class="card" ng-show="f3_3_1 == true || f3_3_8 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                Añadir 1 inyección de insulina de acción rápida antes de la comida principal
+            </div>
+            <div class="item item-text-wrap">
+                <b>Inicio:</b> 4 unidades, 0,1 U/kg o 10 % de la dosis basal. Si HbA<sub>1c</sub> < 8 %, considerar &darr;insulina basal en la misma cantidad<br>
+                <b>Ajustar:</b> &uarr;la dosis 1-2 unidades o un 10-15 % una o dos veces a la semana hasta que se logre el objetivo de autocontrol de la glucemia<br>
+                <b>Para hipoglucemia:</b> determinar y abordar la causa; cuando no exista una causa clara de hipoglucemia, &darr;2-4 unidades o el 10-20 % de la dosis correspondiente
+            </div>
+
+            <ul class="list" style="margin-bottom: 0px;">
+                <li class="item item-toggle item-checkbox1">
+                    Objetivos logrados
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_5_1" ng-change="updateStorage(); cf3_3_5_1(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle item-checkbox1">
+                    Si no se logran los objetivos, <b>considerar el cambio a otra pauta de insulina alternativa</b>
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_5" ng-change="updateStorage(); cf3_3_5(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle item-checkbox1">
+                    Si la HbA<sub>1C</sub> está mal controlada, <b>avanzar a pauta basal-bolo</b>
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_4" ng-change="updateStorage(); cf3_3_4(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- Árbol opcion alternativa insulina -->
+        <div class="card" ng-show="f3_3_1 == true && f3_3_5 == true || f3_3_5 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                Cambiar a insulina premezclada dos veces al día (antes del desayuno y de la cena)
+            </div>
+            <div class="item item-text-wrap">
+                <b>Inicio:</b> dividir la dosis basal actual en ⅔ AM, ⅓ PM, o ½ AM, ½ PM.<br>
+                <b>Ajustar:</b> &uarr;la dosis 1-2 unidades o un 10-15 % una o dos veces a la semana hasta que se logre el objetivo de autocontrol de la glucemia<br>
+                <b>Para hipoglucemia:</b> determinar y abordar la causa; cuando no exista una causa clara de hipoglucemia, &darr;2-4 unidades o el 10-20 % de la dosis correspondiente
+            </div>
+
+            <ul class="list" style="margin-bottom: 0px;">
+                <li class="item item-toggle item-checkbox1">
+                    Objetivos logrados
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_10" ng-change="updateStorage(); cf3_3_10(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle item-checkbox1">
+                    Si la HbA<sub>1C</sub> está mal controlada, <b>avanzar a la 3ª inyección</b>
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_15" ng-change="updateStorage(); cf3_3_15(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="card" ng-show="f3_3_4 == true && f3_3_2 != true && f3_3_3 != true">
+            <div class="item item-divider " style="text-align: center !important;">
+                <b>1 Pauta basal-bolo</b><br>Añadir ≥ 2 inyecciones de insulina de acción rápida antes de las comidas («basal-bolo»)
+            </div>
+            <div class="item item-text-wrap">
+                <b>Inicio:</b> 4 unidades, 0,1 U/kg o 10 % de la dosis basal/comida. Si HbA<sub>1c</sub> < 8 %, considerar ila insulina basal en la misma cantidad<br>
+                <b>Ajustar:</b> &uarr; la dosis 1-2 unidades o un 10-15 % una o dos veces a la semana para conseguir el objetivo de autocontrol de la glucemia<br>
+                <b>Para hipoglucemia:</b> Determinar y abordar la causa; cuando no exista una causa clara, &darr;2-4 unidades o el 10-20 % de la dosis correspondiente
+            </div>
+            <div ng-click="" ui-sref="menu.03-fig_3_4" class="item item-text-wrap titulacion">
+                <i class="icon ion-android-checkmark-circle"></i> Cálculo de la dosis en la terapia bolo-basal
+            </div>
+            <ul class="list" style="margin-bottom: 0px;">
+                <li class="item item-toggle item-checkbox1">
+                    Objetivos logrados
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_6_1" ng-change="updateStorage(); cf3_3_6_1(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle item-checkbox1">
+                    Si no se logran los objetivos, <b>considerar el cambio a una pauta alternativa de insulina</b>
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_6" ng-change="updateStorage(); cf3_3_6(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+
+        <!-- Árbol opcion 3 -->
+        <div class="card" ng-show="f3_3_3 == true || f3_3_9 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                Cambiar a insulina premezclada dos veces al día (antes del desayuno y de la cena)
+            </div>
+            <div class="item item-text-wrap">
+                <b>Inicio:</b> dividir la dosis basal actual en ⅔ AM, ⅓ PM, o ½ AM, ½ PM.<br>
+                <b>Ajustar:</b> &uarr;la dosis 1-2 unidades o un 10-15 % una o dos veces a la semana hasta que se logre el objetivo de autocontrol de la glucemia<br>
+                <b>Para hipoglucemia:</b> determinar y abordar la causa; cuando no exista una causa clara de hipoglucemia, &darr;2-4 unidades o el 10-20 % de la dosis correspondiente
+            </div>
+
+            <ul class="list" style="margin-bottom: 0px;">
+                <li class="item item-toggle item-checkbox1">
+                    Objetivos logrados
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_10" ng-change="updateStorage(); cf3_3_10(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <!-- envio a columna 1 -->
+                <li class="item item-toggle item-checkbox1">
+                    Si no se logran los objetivos, <b>considerar el cambio a otra pauta de insulina alternativa</b>
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_12" ng-change="updateStorage(); cf3_3_12(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle item-checkbox1">
+                    Si la HbA<sub>1C</sub> está mal controlada, <b>avanzar a la 3ª inyección</b>
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_11" ng-change="updateStorage(); cf3_3_11(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Árbol opcion 1 corta -->
+        <div class="card" ng-show="f3_3_12 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                Añadir 1 inyección de insulina de acción rápida antes de la comida principal
+            </div>
+            <div class="item item-text-wrap">
+                <b>Inicio:</b> 4 unidades, 0,1 U/kg o 10 % de la dosis basal. Si HbA<sub>1c</sub> < 8 %, considerar &darr;insulina basal en la misma cantidad<br>
+                <b>Ajustar:</b> &uarr;la dosis 1-2 unidades o un 10-15 % una o dos veces a la semana hasta que se logre el objetivo de autocontrol de la glucemia<br>
+                <b>Para hipoglucemia:</b> determinar y abordar la causa; cuando no exista una causa clara de hipoglucemia, &darr;2-4 unidades o el 10-20 % de la dosis correspondiente
+            </div>
+
+            <ul class="list" style="margin-bottom: 0px;">
+                <li class="item item-toggle item-checkbox1">
+                    Objetivos logrados
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_5_1" ng-change="updateStorage(); cf3_3_5_1(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle item-checkbox1">
+                    Si la HbA<sub>1C</sub> está mal controlada, <b>avanzar a pauta basal-bolo</b>
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_4" ng-change="updateStorage(); cf3_3_4(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card" ng-show="f3_3_11 == true || f3_3_15 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                <b>3ª inyección</b><br>Cambiar a análogo de insulina premezclada 3 veces al día (desayuno, comida y cena)
+            </div>
+            <div class="item item-text-wrap">
+                <b>Inicio:</b> añadir una inyección antes de la comida<br>
+                <b>Ajustar:</b> &uarr;las dosis 1-2 unidades o un 10-15 % una o dos veces a la semana para conseguir el objetivo de autocontrol de la glucemia<br>
+                <b>Para hipoglucemia:</b> determinar y abordar la causa; cuando no exista una causa clara de hipoglucemia, &darr;2-4 unidades o el 10-20 % de la dosis correspondiente
+            </div>
+            <li class="item item-toggle item-checkbox1">
+                Objetivos logrados
+                <label class="toggle toggle-calm">
+                    <input type="checkbox" ng-model="f3_3_13" ng-change="updateStorage(); cf3_3_13(); recalcular()">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <ul class="list" style="margin-bottom: 0px;">
+                <li class="item item-toggle item-checkbox1">
+                    Si no se logran los objetivos, <b>considerar el cambio a una pauta alternativa de insulina</b>
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_14" ng-change="updateStorage(); cf3_3_14(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <!-- solo para columna de en medio -->
+        <div class="card" ng-show="f3_3_4 == true && f3_3_2 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                <b>Pauta basal-bolo</b><br>Añadir ≥ 2 inyecciones de insulina de acción rápida antes de las comidas («basal-bolo»)
+            </div>
+            <div class="item item-text-wrap">
+                <b>Inicio:</b> 4 unidades, 0,1 U/kg o 10 % de la dosis basal/comida. Si HbA<sub>1c</sub> < 8 %, considerar ila insulina basal en la misma cantidad<br>
+                <b>Ajustar:</b> &uarr; la dosis 1-2 unidades o un 10-15 % una o dos veces a la semana para conseguir el objetivo de autocontrol de la glucemia<br>
+                <b>Para hipoglucemia:</b> Determinar y abordar la causa; cuando no exista una causa clara, &darr;2-4 unidades o el 10-20 % de la dosis correspondiente
+            </div>
+            <div ng-click="" ui-sref="menu.03-fig_3_4" class="item item-text-wrap titulacion">
+                <i class="icon ion-android-checkmark-circle"></i> Cálculo de la dosis en la terapia bolo-basal
+            </div>
+            <ul class="list" style="margin-bottom: 0px;">
+                <li class="item item-toggle item-checkbox1">
+                    Objetivos logrados
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_6_1" ng-change="updateStorage(); cf3_3_6_1(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle item-checkbox1">
+                    Si no se logran los objetivos, <b>considerar el cambio a una pauta alternativa de insulina</b>
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_6" ng-change="updateStorage(); cf3_3_6(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card" ng-show="f3_3_4 == true && f3_3_3 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                <b>Pauta basal-bolo</b><br>Añadir ≥ 2 inyecciones de insulina de acción rápida antes de las comidas («basal-bolo»)
+            </div>
+            <div class="item item-text-wrap">
+                <b>Inicio:</b> 4 unidades, 0,1 U/kg o 10 % de la dosis basal/comida. Si HbA<sub>1c</sub> < 8 %, considerar ila insulina basal en la misma cantidad<br>
+                <b>Ajustar:</b> &uarr; la dosis 1-2 unidades o un 10-15 % una o dos veces a la semana para conseguir el objetivo de autocontrol de la glucemia<br>
+                <b>Para hipoglucemia:</b> Determinar y abordar la causa; cuando no exista una causa clara, &darr;2-4 unidades o el 10-20 % de la dosis correspondiente
+            </div>
+            <div ng-click="" ui-sref="menu.03-fig_3_4" class="item item-text-wrap titulacion">
+                <i class="icon ion-android-checkmark-circle"></i> Cálculo de la dosis en la terapia bolo-basal
+            </div>
+            <ul class="list" style="margin-bottom: 0px;">
+                <li class="item item-toggle item-checkbox1">
+                    Objetivos logrados
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_6_1" ng-change="updateStorage(); cf3_3_6_1(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle item-checkbox1">
+                    Si no se logran los objetivos, <b>considerar el cambio a una pauta alternativa de insulina</b>
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f3_3_6" ng-change="updateStorage(); cf3_3_6(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- última opción Basal -->
+        <div class="card" ng-show="f3_3_16 == true || f3_3_14 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                <b>Pauta basal-bolo</b><br>Añadir ≥ 2 inyecciones de insulina de acción rápida antes de las comidas («basal-bolo»)
+            </div>
+            <div class="item item-text-wrap">
+                <b>Inicio:</b> 4 unidades, 0,1 U/kg o 10 % de la dosis basal/comida. Si HbA<sub>1c</sub> < 8 %, considerar ila insulina basal en la misma cantidad<br>
+                <b>Ajustar:</b> &uarr; la dosis 1-2 unidades o un 10-15 % una o dos veces a la semana para conseguir el objetivo de autocontrol de la glucemia<br>
+                <b>Para hipoglucemia:</b> Determinar y abordar la causa; cuando no exista una causa clara, &darr;2-4 unidades o el 10-20 % de la dosis correspondiente
+            </div>
+            <div ng-click="" ui-sref="menu.03-fig_3_4" class="item item-text-wrap titulacion">
+                <i class="icon ion-android-checkmark-circle"></i> Cálculo de la dosis en la terapia bolo-basal
+            </div>
+        </div>
+
+
+        <!-- opción corta -->
+        <div class="card" ng-show="f3_3_6 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                <b>3ª inyección</b><br>Cambiar a análogo de insulina premezclada 3 veces al día (desayuno, comida y cena)
+            </div>
+            <div class="item item-text-wrap">
+                <b>Inicio:</b> añadir una inyección antes de la comida<br>
+                <b>Ajustar:</b> &uarr;las dosis 1-2 unidades o un 10-15 % una o dos veces a la semana para conseguir el objetivo de autocontrol de la glucemia<br>
+                <b>Para hipoglucemia:</b> determinar y abordar la causa; cuando no exista una causa clara de hipoglucemia, &darr;2-4 unidades o el 10-20 % de la dosis correspondiente
+            </div>
+        </div>
+
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+        <div class="card" class="table-bordered" ng-show="fig_3_3_si == true || f3_3_7 == true || f3_3_5_1 == true || f3_3_5 == true || f3_3_6_1 == true || f3_3_6 == true || f3_3_10 == true || f3_3_12 == true || f3_3_13 == true || f3_3_14">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2" ng-click="myGoBack()">FINALIZAR</a>
+            </div>
+        </div>
+
+        <div class="button-bar" style="padding: 10px;" >
+            <a class="button button-energized button2" ng-click="f3_3_reset(); scrollTop()">RESET</a>
+        </div>
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+
+    </ion-content>
+
+
+</ion-view>

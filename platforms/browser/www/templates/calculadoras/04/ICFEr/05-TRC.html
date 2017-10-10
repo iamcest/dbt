@@ -1,0 +1,131 @@
+<ion-modal-view id="modal-grande" style="background-color:  #EEEEEE;">
+
+
+
+    <ion-header-bar class="bar bar-calm">
+        <h1 class="title">Consultas</h1>
+        <button class="button button-icon icon-left ion-ios-close-outline button-primary" ng-click="closeModal()" ></button>
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="spacer" style="width: 300px; height: 30px;"></div>
+        <div class="titulo-cal" style="text-align: center">
+            Recomendaciones de la TRC en ICFEr
+        </div>
+
+        <div class="card" >
+            <div  class="item item-divider ">
+                - TMO<sup>a</sup><br>
+                - FE ≤35%<br>
+                - Sintomático<br>
+                - Ritmo sinusal
+            </div>
+            <div class="button-bar" style="padding: 10px;">
+                <a class="button button-calm button2" style="background-color: #009C00 !important" ng-if="inibri == 1" ng-click="verBri()">BRI {{valor}}</a>
+                <a class="button button-balanced button2" style="background-color: #A72000 !important" ng-if="ininobri == 1" ng-click="verNobri()">No BRI {{valor}}</a>
+            </div>
+
+            <div class="button-bar" style="padding: 10px;" ng-if="bri == 1" >
+                <a class="button button-calm button2" style="background-color: #009C00 !important" ng-click="verBri_1()" >≥ 150 ms</a>
+                <a class="button button-balanced button2" style="background-color: #009C00 !important" ng-click="verBri_2()" >130-149 ms</a>
+            </div>
+            <div class="button-bar" style="padding: 10px;" ng-if="nobri == 1">
+                <a class="button button-calm button2" style="background-color: #A72000 !important" ng-click="vernoBri_1()">≥ 150 ms</a>
+                <a class="button button-balanced button2" style="background-color: #A72000 !important" ng-click="vernoBri_2()">130-149 ms</a>
+            </div>
+
+            <div id="img-BRI-150" style="padding: 10px; text-align: center;" ng-if="bri_1 == 1" ng-controller="testCtrl">
+                <img src="img/ICFEr/trc1.png" width="160">
+                <table class="table table-bordered table-striped" >
+                    <tbody>
+                        <tr>
+                            <td style="font-size: 16px;"><b>Clase de recomendación I<br>Nivel de evidencia A </b></td>
+                            <td><label class="toggle toggle-calm">
+                                    <input type="checkbox" ng-model="trc_1" ng-change="updateStorage(); trc1()" >
+                                    <div class="track">
+                                        <div class="handle"></div>
+                                    </div>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="button-bar" style="padding: 10px">
+                    <a class="button button-calm button2" ng-click="closeModal()">Continuar</a>
+                </div>
+            </div>
+            <div id="img-BRI-150" style="padding: 10px; text-align: center;" ng-if="bri_2 == 1" ng-controller="testCtrl">
+                <img src="img/ICFEr/trc2.png" width="160">
+                <table class="table table-bordered table-striped" >
+                    <tbody>
+                        <tr>
+                            <td style="font-size: 16px;"><b>Clase de recomendación I<br>Nivel de evidencia B </b></td>
+                            <td><label class="toggle toggle-calm">
+                                    <input type="checkbox" ng-model="trc_2" ng-change="updateStorage(); trc2()">
+                                    <div class="track">
+                                        <div class="handle"></div>
+                                    </div>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="button-bar" style="padding: 10px">
+                    <a class="button button-calm button2" ng-click="closeModal()">Continuar</a>
+                </div>
+            </div>
+
+            <div id="img-BRI-150" style="padding: 10px; text-align: center;" ng-if="nobri_1 == 1" ng-controller="testCtrl">
+                <img src="img/ICFEr/trc3.png" width="160">
+                <table class="table table-bordered table-striped" >
+                    <tbody>
+                        <tr>
+                            <td style="font-size: 16px;"><b>Clase de recomendación IIa<br>Nivel de evidencia B </b></td>
+                            <td><label class="toggle toggle-calm">
+                                    <input type="checkbox" ng-model="trc_3" ng-change="updateStorage(); trc3()">
+                                    <div class="track">
+                                        <div class="handle"></div>
+                                    </div>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="button-bar" style="padding: 10px">
+                    <a class="button button-calm button2" ng-click="closeModal()">Continuar</a>
+                </div>
+            </div>
+            <div id="img-BRI-150" style="padding: 10px; text-align: center;" ng-if="nobri_2 == 1" ng-controller="testCtrl">
+                <img src="img/ICFEr/trc4.png" width="160">
+                <table class="table table-bordered table-striped" >
+                    <tbody>
+                        <tr>
+                            <td style="font-size: 16px;"><b>Clase de recomendación IIb<br>Nivel de evidencia B </b></td>
+                            <td><label class="toggle toggle-calm">
+                                    <input type="checkbox" ng-model="trc_4" ng-change="updateStorage(); trc4()">
+                                    <div class="track">
+                                        <div class="handle"></div>
+                                    </div>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="button-bar" style="padding: 10px">
+                    <a class="button button-calm button2" ng-click="closeModal()">Continuar</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="button-bar" style="padding: 10px">
+            <a class="button button-calm button2" ng-click="reset()">Reset</a>
+        </div>
+
+
+
+
+    </ion-content>
+
+
+</ion-modal-view>

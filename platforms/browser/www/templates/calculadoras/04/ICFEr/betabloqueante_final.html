@@ -1,0 +1,36 @@
+<div class="item item-divider">
+    Tratamiento con betabloqueante
+</div>
+<table style="margin-bottom: 0px;" class="table table-bordered table-striped" ng-controller="testCtrl" ng-if="Bisoprolol == true || Carvedilol == true || Metoprolol == true || Nebivolol == true">
+
+    <tbody >
+    <thead style="background-color: #B84E00; color: #EEEEEE;">
+        <tr>
+            <th>Betabloqueante</th>
+            <th>Dosis inicio (mg)</th>
+            <th>Dosis objetivo (mg)</th>
+        </tr>
+    </thead>
+    <tr ng-if="Bisoprolol == true">
+        <td>Bisoprolol</td>
+        <td>1,25 mg/24 h</td>
+        <td>10 mg/24 h</td>
+    </tr>
+    <tr ng-if="Carvedilol == true">
+        <td>Carvedilol</td>
+        <td>3,125 mg/12 h</td>
+        <td>25-50 mg/12 h</td>
+    </tr>
+    <tr ng-if="Metoprolol == true">
+        <td>Metoprolol CR/XL</td>
+        <td>12,5 o 25 mg/24 h</td>
+        <td>200 mg/24 h</td>
+    </tr>
+    <tr ng-if="Nebivolol == true">
+        <td>Nebivolol</td>
+        <td>1,25 mg/24 h</td>
+        <td>10 mg/24 h</td>
+    </tr>
+
+</tbody>
+</table>

@@ -1,0 +1,176 @@
+
+
+<ion-view title="Situaciones especiales" id="page7">
+
+    <div class="bar bar-subheader cal-4">
+        <h2 class="title blanco">Hipoglucemia</h2>
+    </div>
+
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 70px;"></div>
+
+        <div class="titulo-cal" style="text-align: center">Tratamiento de la hipoglucemia</div>
+
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+        <div class="card">
+            <div class="item item-divider " style="text-align: center !important;">
+                Glucemia < 70 mg/dl (3,9 mmol/l)
+            </div>
+
+            <table class="table table-bordered2" style="margin-bottom: 0px;">
+                <tbody>
+                    <tr>
+                        <td style="text-align: center; background-color: #8BCA53; color: white; width: 50%">
+                            <div>Paciente consciente capaz de ingerir
+                            </div>
+                            <div style="margin-top: 20px">
+                                <label class="toggle toggle-calm">
+                                    <input type="checkbox" ng-model="f4_3_1"  ng-change="updateStorage(); cf4_3_1(); recalcular();">
+                                    <div class="track">
+                                        <div class="handle"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </td>
+                        <td style="text-align: center; background-color: #AE3248; color: white;">
+                            <div>Paciente inconsciente o incapaz de ingerir</div>
+                            <div style="margin-top: 20px;">
+                                <label class="toggle toggle-calm">
+                                    <input type="checkbox" ng-model="f4_3_2" ng-change="updateStorage(); cf4_3_2(); recalcular();">
+                                    <div class="track">
+                                        <div class="handle"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="card" ng-show="f4_3_1 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                15 g de glucosa por vía oral:
+            </div>
+            <ul class="list" style="margin-bottom: 0px;">
+
+                <li class="item item-toggle item-checkbox1">
+                    - 1.ª elección: geles de glucosa
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f4_3_3" ng-change="updateStorage(); cf4_3_3(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle item-checkbox1">
+                    - 2.ª elección: 150 ml de zumo o un refresco o 2-3 terrones de azúcar
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f4_3_4" ng-change="updateStorage(); cf4_3_4(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card" ng-show="f4_3_1 == true && (f4_3_3 == true || f4_3_4 == true)">
+            <div class="item item-divider " style="text-align: center !important;">
+                Glucemia
+            </div>
+
+            <table class="table table-bordered2" style="margin-bottom: 0px;">
+                <tbody>
+                    <tr>
+                        <td style="text-align: center; background-color: #8BCA53; color: white; width: 50%">
+                            <div>< 70 mg/dl
+                            </div>
+                            <div style="margin-top: 20px">
+                                <label class="toggle toggle-calm">
+                                    <input type="checkbox" ng-model="f4_3_5"  ng-change="updateStorage(); cf4_3_5(); recalcular();">
+                                    <div class="track">
+                                        <div class="handle"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </td>
+                        <td style="text-align: center; background-color: #A6D379; color: white;">
+                            <div>> 70 mg/dl</div>
+                            <div style="margin-top: 20px;">
+                                <label class="toggle toggle-calm">
+                                    <input type="checkbox" ng-model="f4_3_6" ng-change="updateStorage(); cf4_3_6(); recalcular()">
+                                    <div class="track">
+                                        <div class="handle"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="calculadora-menu cal-2" style="text-align: center; background-color: #8BCA53;" ng-show="f4_3_1 == true && f4_3_5 == true">
+            <b>Repetir la toma de 15 g de glucosa y glucemia a los 15 minutos.</b>
+        </div>
+
+        <div class="calculadora-menu cal-2" style="text-align: center; background-color: #8BCA53;" ng-show="f4_3_1 == true && f4_3_6 == true">
+            <b>Tomar hidratos de carbono de absorción lenta</b>
+        </div>
+
+        <!-- Árbol inconsciente -->
+        <div class="card" ng-show="f4_3_2 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                Tratamiento
+            </div>
+            <ul class="list" style="margin-bottom: 0px;">
+
+                <li class="item item-toggle item-checkbox1">
+                    <b>Paciente con un acceso vascular:</b><br>
+                    30 ml de glucosa al 33 % o 20 ml al 50 % + suero glucosado al 5 % (500 ml/6 h)
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f4_3_7" ng-change="updateStorage(); cf4_3_7(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle item-checkbox1">
+                    <b>Paciente sin acceso vascular:</b><br>
+                    Glucagón 1 mg intravenoso o subcutáneo
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f4_3_8" ng-change="updateStorage(); cf4_3_8(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="calculadora-menu cal-2" style="text-align: center; background-color: #8BCA53;" ng-show="f4_3_2 == true && (f4_3_7 == true || f4_3_8 == true)">
+            <b>Tras recuperar la conciencia debe tomar hidratos de carbono de absorción lenta</b>
+        </div>
+
+
+        <div class="card" class="table-bordered" ng-show="f4_3_5 == true || f4_3_6 == true || f4_3_7 == true || f4_3_8 == true">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2"  ng-click="myGoBack()">Continuar</a>
+            </div>
+        </div> 
+
+        <div class="button-bar" style="padding: 10px;" >
+            <a class="button button-energized button2" ng-click="figura_4_3_reset(); scrollTop()">RESET</a>
+        </div>
+
+        <div class="spacer" style="width: 300px; height: 30px;"></div>
+    </ion-content>
+
+
+</ion-view>

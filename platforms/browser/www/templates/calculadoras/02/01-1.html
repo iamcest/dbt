@@ -1,0 +1,50 @@
+
+
+<ion-view title="Objetivo y control global" id="page7">
+
+    <div class="bar bar-subheader cal-2">
+        <h2 class="title blanco">Estilo de vida</h2>
+    </div>
+
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <div class="card" style="margin: 10px;">
+            <div class="item item-divider item-icon-left">
+                <i class="icon ion-ios-help-outline"></i>
+                Consultas
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-2-11')"class="item item-text-wrap">
+                Corrección del estilo de vida
+            </div>
+        </div>
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+
+        <div class="card">
+            <div class="item item-divider " style="text-align: center !important;">
+                Estilo de vida
+            </div>
+            <ion-list id="menu-null">
+                <ion-item id="menu-list-item1 " ui-sref="menu.02-01-1-1"  class="item-icon-right"> Mantener peso<br>Hábitos dietéticos adecuados <i class="icon ion-ios-arrow-right"></i></ion-item>
+                <ion-item id="menu-list-item1 " ui-sref="menu.02-01-1-2"  class="item-icon-right"> Ejercicio físico moderado-intenso al menos 150 min/semana <i class="icon ion-ios-arrow-right"></i></ion-item>
+                <ion-item id="menu-list-item1 " ui-sref="menu.02-01-1-3"  class="item-icon-right"> No fumar<br>Evitar tabaquismo pasivo <i class="icon ion-ios-arrow-right"></i></ion-item>
+            </ion-list>
+
+        </div>
+
+        <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2" ng-click="myGoBack()">CONTINUAR</a>
+            </div>
+        </div>
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+
+    </ion-content>
+
+
+</ion-view>

@@ -1,0 +1,72 @@
+<ion-view title="Diagnóstico. Gestión integral" id="page7" style="background-color:  #EEEEEE;">
+
+    <div class="bar bar-subheader cal-1">
+        <h2 class="title blanco">Diagnóstico de la diabetes</h2>
+    </div>
+
+
+
+    <ion-content ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <div class="titulo-cal" style="text-align: center">Puntos de corte para el diagnóstico de las alteraciones del metabolismo de la glucosa</div>
+
+        <table class="table table-bordered table-striped">
+
+            <tbody>
+            <thead style="background-color: #A72000; color: #EEEEEE;">
+                <tr>
+                    <th>Diagnosis</th>
+                    <th>Plasma venoso<sup>a</sup> mmol/L(mg/dL)</th>
+                    <th>Sangre venosa mmol/L(mg/dL)</th>
+                    <th>Sangre capilar mmol/L(mg/dL)</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>GAA-GA</td>
+                <td>6.1 (110)</td>
+                <td>5.0 (90)</td>
+                <td>5.6 (101)
+                </td>
+            </tr>
+            <tr>
+                <td>IT-GP2h</td>
+                <td>7.8 (140)</td>
+                <td>6.5 (117)</td>
+                <td>7.2 (130)
+                </td>
+            </tr>
+            <tr>
+                <td>Diabetes-GA</td>
+                <td>2,5-5 mg/24 h</td>
+                <td>20-35 mg/24 h</td>
+                <td>6.5 (117)
+                </td>
+            </tr>
+            <tr>
+                <td>Diabetes-GP2h</td>
+                <td>11.1 (200)</td>
+                <td>9.4 (169)</td>
+                <td>10.3 (185)
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="card">
+            <div class="item item-text-wrap">
+                <h3>Adaptada de Rydén L, et al. Eur Heart J. 2013;34:3035-87.<br><sup>a</sup> Estándar</h3>
+            </div>
+        </div>
+
+        <div class="button-bar" style="padding: 10px;">
+            <a  class="button button-calm button2" ng-click="myGoBack()">CONTINUAR</a>
+        </div>
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+
+    </ion-content>
+
+
+</ion-view>

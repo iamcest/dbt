@@ -1,0 +1,48 @@
+<ion-modal-view id="modal-grande" style="background-color:  #EEEEEE;">
+
+
+
+    <ion-header-bar class="bar bar-calm">
+        <h1 class="title">Titulación digoxina</h1>
+        <button class="button button-icon icon-left ion-ios-close-outline button-primary" ng-click="closeModal()"></button>
+    </ion-header-bar>
+
+    <ion-content>
+
+
+        <table class="table table-bordered table-striped">
+
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th>Titulación digoxina</th>
+                    <th>Dosis inicio (mg)</th>
+                    <th>Dosis diaria (mg)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Digoxina</td>
+                <td>0,75-1,5 mg/día</td>
+                <td>0,25 mg/día</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        
+                <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2"   ng-click="closeModal()">CONTINUAR</a>
+            </div>
+        </div>
+
+    </ion-content>
+
+
+</ion-modal-view>

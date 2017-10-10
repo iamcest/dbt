@@ -1,0 +1,135 @@
+<ion-modal-view id="modal-grande" style="background-color:  #EEEEEE;">
+
+
+
+    <ion-header-bar class="bar bar-calm">
+        <h1 class="title">Leyenda</h1>
+        <button class="button button-icon icon-left ion-ios-close-outline button-primary" ng-click="closeModal()"></button>
+    </ion-header-bar>
+
+    <ion-content>
+
+
+        <table class="table table-bordered table-striped">
+
+            <tbody>
+                <tr ng-if="leyenda == 'a' || leyenda2 == 'a' || leyenda3 == 'a'">
+
+                    <td>FE <40%.</td>
+                </tr>
+                <tr ng-if="leyenda == 'b' || leyenda2 == 'b' || leyenda3 == 'b'">
+
+                    <td>CF NYHA II-IV.</td>
+                </tr>
+                <tr ng-if="leyenda == 'c' || leyenda2 == 'c' || leyenda3 == 'c'">
+
+                    <td>IECA:<br>
+                        1. Recomendación clase I y nivel de evidencia A en las GPC de la ESC 2016, añadidos a un betabloqueante para pacientes sintomáticos con ICFEr para reducir el riesgo de hospitalización por IC y el riesgo de muerte.<br>
+                        2. Deben titularse hasta la dosis máximas toleradas por el paciente que han mostrado resultado en los ensayos clínicos. <br>
+                    </td>
+                </tr>
+                <tr ng-if="leyenda == 'd' || leyenda2 == 'd' || leyenda3 == 'd'">
+
+                    <td>CF NYHA II-IV.</td>
+                </tr>
+                <tr ng-if="leyenda == 'e' || leyenda2 == 'e' || leyenda3 == 'e'">
+
+                    <td>La utilización de ARA II es recomendación clase I y nivel de evidencia B en las GPC de la ESC 2016, si los IECA están contraindicados o no son tolerados para reducir el riesgo de hospitalización por IC y la mortalidad CV (los pacientes deberían recibir también un betabloqueante y un ARM).</td>
+                </tr>
+                <tr ng-if="leyenda == 'f' || leyenda2 == 'f' || leyenda3 == 'f'">
+
+                    <td>Betabloqueante:<br>
+                        1. Recomendación clase I y nivel de evidencia A en GPC de la ESC 2016, añadidos a un IECA (o ARA II si los IECA están contraindicados o no son tolerados) para pacientes estables sintomáticos con ICFEr para reducir el riesgo de hospitalización IC y el riesgo de muerte.<br>
+                        2. Deben titularse hasta la dosis máximas toleradas por el paciente que han mostrado resultado en los ensayos clínicos. 
+                    </td>
+                </tr>
+                <tr ng-if="leyenda == 'g' || leyenda2 == 'g' || leyenda3 == 'g'">
+
+                    <td>La ivabradina debería ser considerada (recomendanción IIa y nivel de evidencia C en las GPC de la ESC 2016) para reducir el riesgo de hospitalización por IC y la mortalidad CV en pacientes sintomáticos con FEVI ≤35% en ritmo sinusal y una FC de reposo ≥70 lpm que no toleren o tengan contraindicados el uso de betabloqueantes. Los pacientes también deberían recibir un IECA (o ARA II si los IECA están contraindicados o no son tolerados) y un ARM (o ARA II si los ARM están contraindicados o no son tolerados).
+                    </td>
+                </tr>
+                <tr ng-if="leyenda == 'h' || leyenda2 == 'h' || leyenda3 == 'h'">
+
+                    <td>ARM:<br>
+                        1. Recomendación clase I y nivel de evidencia A en las GPC de la ESC 2016, para pacientes con ICFEr que permanecen sintomáticos a pesar de tratamiento con un IECA (o ARA II si los IECA están contraindicados o no son tolerados) y un betabloqueante, para reducir el riesgo de hospitalización por IC y el riesgo de muerte.
+                        <br>2. Los pacientes deben haber tenido un ingreso por IC <6 meses o péptidos natriuréticos plasmáticos elevados (BNP ≥250 pg/mL o NT-proBNP ≥500 pg/mL en hombres y ≥750 pg/mL en mujeres).
+                        <br>3. Deben titularse hasta la dosis máximas toleradas por el paciente que han mostrado resultado en los ensayos clínicos. 
+                    </td>
+                </tr>
+                <tr ng-if="leyenda == 'i' || leyenda2 == 'i' || leyenda3 == 'i'">
+
+                    <td>Un ARA II podría ser considerado para reducir el riesgo de hospitalización por IC y la mortalidad CV (recomendación clase IIb y nivel de evidencia C en las GPC de la ESC 2016) en pacientes sintomáticos a pesar de tratamiento con betabloqueantes que no toleren un ARM.
+                    </td>
+                </tr>
+                <tr ng-if="leyenda == 'j' || leyenda2 == 'j' || leyenda3 == 'j'">
+
+                    <td>INRA (sacubitrilo/valsartan):<br>
+                        1. Se recomienda para reemplazar a los IECA con el objetivo de reducir el riesgo de hospitalización por IC y muerte en pacientes ambulatorios con ICFEr que permanecen sintomáticos a pesar de TMO con un IECA, un betabloqueante y un ARM.
+                        <br>2. Los pacientes deberían tener los péptidos natriuréticos plasmáticos elevados (BNP ≥150 pg/mL o NT-proBNP ≥600 pg/mL, o BNP ≥100 pg/mL o NT-proBNP ≥400 pg/mL en caso de hospitalización por IC <12 meses) y tolerar una dosis equivalente a 10 mg de enalapril 2 veces al día.
+                    </td>
+                </tr>
+                <tr ng-if="leyenda == 'k' || leyenda2 == 'k' || leyenda3 == 'k'">
+
+                    <td>TRC:
+                        <br>1. Ver apartado específico de dispositivos. 
+                        <br>2. Se recomienda en pacientes con QRS ≥130 ms y BRI (en ritmo sinusal).
+                        <br>3. Debería o podría ser considerada en pacientes con QRS ≥130 ms sin BRI (en ritmo sinusal) o FA con una estrategia que asegure la estimulación biventricular (decisión individualizada).
+                    </td>
+                </tr>
+                <tr ng-if="leyenda == 'l' || leyenda2 == 'l' || leyenda3 == 'l'">
+
+                    <td>Ivabradina:
+                        <br>1. Debería ser considerada (recomendanción IIa y nivel de evidencia B en las GPC de la ESC 2016) para reducir el riesgo de hospitalización por IC y la mortalidad CV en pacientes sintomáticos con FEVI ≤35% en ritmo sinusal y una FC de reposo ≥70 a pesar del tratamiento con la dosis de betabloqueantes que han mostrado evidencia (o la máxima dosis tolerada), un IECA (o ARA II si los IECA están contraindicados o no son tolerados) y un ARM (o ARA II si los ARM están contraindicados o no son tolerados).
+                        <br>2. Son pacientes con una hospitalización por IC <1 año.
+                    </td>
+                </tr>
+                <tr ng-if="leyenda == 'm' || leyenda2 == 'm' || leyenda3 == 'm'">
+
+                    <td>Diuréticos: 
+                        <br>1. Son recomendados para mejorar los síntomas y la capacidad de ejercicio en pacientes con signos y/o síntomas de congestión (recomendación clase I y nivel de evidencia B en las GPC de la ESC 2016).
+                        <br>2. Deberían ser considerados para reducir el riego de hospitalización por IC en pacientes con signos y/o síntomas de congestión (recomendación clase IIa y nivel de evidencia B en las GPC de la ESC 2016).	3. No han mostrado reducción de la mortalidad.
+                    </td>
+                </tr>
+                <tr ng-if="leyenda == 'n' || leyenda2 == 'n' || leyenda3 == 'n'">
+
+                    <td>DAI:
+                        <br>1. Prevención secundaria. Recomendación clase I y nivel de evidencia A en las GPC de la ESC 2016 para reducir el riesgo de muerte súbita y la mortalidad por todas las causas en pacientes que se han recuperado de una arritmia ventricular (TV/FV) que causa inestabilidad hemodinámica, con una expectativa de vida >1 año con buena clase funcional.
+                        <br>2. Prevención primaria. Recomendado para reducir el riesgo de muerte súbita y la mortalidad por todas las causas en pacientes con síntomas de IC (CF II-III de la NYHA) y una FEVI ≤35% a pesar de ≥3 meses de TMO, con una expectativa de vida sustancialmente >1 año con buena clase funcional:
+            <br><li>2.1. Recomendación clase I y nivel de evidencia A en las GPC de la ESC 2016 en pacientes con cardiopatía isquémica (a menos que hayan tenido un infarto de miocardio en los 40 días previos).</li>
+            <li>2.2. Recomendación clase I y nivel de evidencia B en las GPC de la ESC 2016 en pacientes con miocardiopatía dilatada.</li>
+            3. No se recomiendan en pacientes en  indicado CF IV de la NYHA.
+            </td>
+            </tr>
+            <tr ng-if="leyenda == '1' || leyenda2 == '1' || leyenda3 == '1'">
+
+                <td>Dosis baja de IECA:
+                    <br>Enalapril 10 mg al día o equivalente.
+                </td>
+            </tr> 
+            <tr ng-if="leyenda == '2' || leyenda2 == '2' || leyenda3 == '2'">
+
+                <td>Dosis baja de ARA II:
+                    <br>Valsartan 160 mg al día o equivalente.
+                </td>
+            </tr> 
+            <tr ng-if="leyenda == 'o' || leyenda2 == 'o' || leyenda3 == 'o'">
+
+                <td>
+                    El usuario redondeará la cifra de desayuno, comida y cena, atendiendo a las características del paciente.
+                </td>
+            </tr> 
+
+
+            </tbody>
+        </table>
+
+        <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2"   ng-click="closeModal()">CONTINUAR</a>
+            </div>
+        </div>
+
+    </ion-content>
+
+
+</ion-modal-view>

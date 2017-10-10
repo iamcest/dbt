@@ -1,0 +1,46 @@
+
+
+<ion-view title="Diagnóstico. Gestión integral" id="page7">
+
+    <div class="bar bar-subheader cal-1">
+        <h2 class="title blanco">Diagnóstico de la diabetes</h2>
+    </div>
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+
+        <div class="card" style="margin: 20px;">
+            <div class="item item-divider item-icon-left">
+                <i class="icon ion-ios-help-outline"></i>
+                Consultas
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-1-1')"class="item item-text-wrap">
+                Diagnóstico de las alteraciones del metabolismo de la glucosa
+            </div>
+
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-1-2')"class="item item-text-wrap">
+                Clasificación de la diabetes mellitus
+            </div>
+
+        </div>
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+
+        <div class="card">
+            <div class="item item-divider " style="text-align: center !important;">
+                Diagnóstico de la diabetes
+            </div>
+            <div class="button-bar" style="padding: 10px;">
+                <a class="button button-calm button2"  ui-sref="menu.01-figura-1-2">Paciente con ECV</a>
+                <a class="button button-balanced button2" ui-sref="menu.01-04">Paciente asintomático</a>
+            </div>
+
+        </div>
+
+
+    </ion-content>
+
+
+</ion-view>

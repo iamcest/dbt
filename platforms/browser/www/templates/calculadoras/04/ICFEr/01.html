@@ -1,0 +1,45 @@
+<ion-view title="Situaciones especiales" id="page6" >
+
+    <div class="bar bar-subheader cal-4">
+        <h2 class="title blanco">Insuficiencia cardiaca</h2>
+    </div>
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="verControler">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <div >
+            <div class="titulo-cal" style="text-align: center" ng-controller="leyendaCtrl">Tratamiento <a ng-click="openModal('a')">ICFEr <sup><i class="icon ion-help-circled"></i></sup></a> en <a ng-click="openModal('b', 'c')">paciente sintomático <sup><i class="icon ion-help-circled"></i></sup></a></div>
+
+            <div class="card">
+                <div class="item item-divider item-icon-left">
+                    <i class="icon ion-ios-help-outline"></i>
+                    Consultas
+                </div>
+                <div ng-controller="modalesVentanas" class="item item-text-wrap" ng-click="openModal('ctabla-2-2')">
+                    Medidas no farmacológicas recomendadas en el pacientes con ICFEr
+                </div>
+                <div ng-controller="modalesVentanas" class="item item-text-wrap" ng-click="openModal('ctabla-2-3')">
+                    Recomendaciones de autocuidado en el paciente con insuficiencia cardiaca
+                </div>
+                <div ng-controller="modalesVentanas" class="item item-text-wrap" ng-click="openModal('ctabla-2-25')">
+                    Fármacos no recomendados en el paciente con ICFEr
+                </div>
+                
+            </div>
+            
+            <div class="card">
+
+                <div class="button-bar" style="padding: 10px;">
+                    <a class="button button-calm button2" ui-sref="menu.2-icfer-01-1" >Continuar</a>
+                </div>
+            </div>        
+
+        </div>
+
+
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+    </ion-content>
+
+
+</ion-view>
+

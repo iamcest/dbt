@@ -1,0 +1,64 @@
+<ion-modal-view id="modal-grande" style="background-color:  #EEEEEE;">
+
+    <ion-header-bar class="bar bar-calm">
+        <h1 class="title">Titulación ivabradina</h1>
+        <button class="button button-icon icon-left ion-ios-close-outline button-primary" ng-click="closeModal()"></button>
+    </ion-header-bar>
+
+    <ion-content>
+
+
+        <table class="table table-bordered table-striped" ng-controller="testCtrl">
+
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th>Fármaco</th>
+                    <th>Dosis inicio</th>
+                    <th>Dosis diaria</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Ivabradina</td>
+                <td>2,5-5 mg/12 h</td>
+                <td>7,5 mg/12 h</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Ivabradina" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+        <table class="table table-bordered table-striped">
+            <tbody>
+                <tr>
+                    <td>Contraindicaciones</td>
+                    <td>
+            <li>Bradicardia sintomática
+                <li>Enfermedad del nodo  sinusal
+                <li>Con inhibidores potentes del citocromo P450 3A4 (antifúngicos: ketoconazol, antibióticos macrólidos: eritromicina) o nhibidores de la proteasa del VIH (nelfinavir, ritonavir)
+                <li>Embarazo y lactancia
+            </li>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+        
+                <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2"   ng-click="closeModal()">CONTINUAR</a>
+            </div>
+        </div>
+
+
+
+    </ion-content>
+
+
+</ion-modal-view>

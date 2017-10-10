@@ -1,0 +1,104 @@
+
+
+<ion-view title="Tratamiento antidiabético" id="page7">
+
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+
+        <div class="titulo-cal" style="text-align: center">Algoritmo terapéutico del paciente con diabetes mellitus tipo 2 y enfermedad cardiovascular</div>
+
+        <div class="calculadora-menu cal-2" style="text-align: center">Seguimiento</div>
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+        <div class="cal-3-1" ng-show="HbAs_1 == true">
+            <div class="row" style="margin-bottom: 10px;">
+                <div class="col" style="background-color: #A4A6A8; color: #FFFFFF; padding-top: 10px;">IFG</div>
+                <div class="col col-75" style="background-color: #50BACC; color: #FFFFFF; padding-top: 10px;">HbA<sub>1C</sub> 6,5-6,9 %</div>
+            </div>
+            <div class="row">
+                <div class="col" style="background-color: #FFD300; color: #000;">> 45</div>
+                <div class="col col-75" style="text-align: center;  background-color: #DDECCC; color: #000; padding-bottom: 15px; ">Mantener tratamiento</div>
+            </div>
+            <div class="row">
+                <div class="col" style="text-align: center; background-color: #FFD300; color: #000;">30-45<sup>b</sup></div>
+                <div class="col col-75" style="text-align: center;  background-color: #DDECCC; color: #000; padding-bottom: 15px;">Mantener tratamiento</div>
+            </div>
+            <div class="row">
+                <div class="col" style="text-align: center; background-color: #FFD300; color: #000;">< 30</div>
+                <div class="col col-75"  style="text-align: center;  background-color: #AE3248; color: #FFFFFF; padding-bottom: 15px;">Mantener tratamiento</div>
+            </div>
+        </div>
+
+        <div class="cal-3-1" ng-show="HbAs_2 == true">
+            <div class="row" style="margin-bottom: 10px;">
+                <div class="col" style="background-color: #A4A6A8; color: #FFFFFF; padding-top: 10px;">IFG</div>
+                <div class="col col-75" style="background-color: #007FA1; color: #FFFFFF; padding-top: 10px;">HbA<sub>1C</sub> 7,0-10 %</div>
+            </div>
+            <div class="row">
+                <div class="col" style="background-color: #FFD300; color: #000;">> 45</div>
+                <div class="col col-75 item-icon-right" style="padding: 0px"><ion-checkbox class="checkbox-assertive check1 item-checkbox-right" ng-model="HbA_2_2" ng-change="updateStorage(); figura_3_1_HbA_1_2(); recalcular()" style="background-color: #8BCA53; color: #000;">iSGLT-2<i class="icon ion-ios-arrow-right"></i></ion-checkbox></div>
+            </div>
+            <div class="row">
+                <div class="col" style="background-color: #FFD300; color: #000;">30-45<sup>b</sup></div>
+        
+                <div class="col col-75 item-icon-right" style="padding: 0px; padding-left: 50px;"><ion-checkbox class="checkbox-assertive check1 item-checkbox-right" ng-model="HbA_2_3" ng-change="updateStorage(); figura_3_1_HbA_1_3(); recalcular()" style="background-color: #8BCA53; color: #000;">aGLP1<i class="icon ion-ios-arrow-right"></i></ion-checkbox></div>
+            </div>
+            <div class="row">
+                <div class="col col-50" style="margin-right: -7px;"></div>
+                <div class="col col-50 item-icon-right" style="padding: 0px"><ion-checkbox class="checkbox-assertive check1 item-checkbox-right" ng-model="HbA_2_4" ng-change="updateStorage(); figura_3_1_HbA_1_4(); recalcular()" style="background-color: #DDECCC; color: #000;">iDPP-4<sup>c</sup><i class="icon ion-ios-arrow-right"></i></ion-checkbox></div>
+            </div>
+
+            <div class="row">
+                <div class="col" style="text-align: center; background-color: #FFD300; color: #000;">< 30</div>
+                <div class="col col-75 item-icon-right"  style="padding: 0px"><ion-checkbox class="checkbox-assertive check1 item-checkbox-right" ng-model="HbA_2_5" ng-change="updateStorage(); figura_3_1_HbA_2_5(); recalcular()" style="background-color: #AE3248; color: #FFFFFF;">Ajustes dosis insulina basal<i class="icon ion-ios-arrow-right"></i></ion-checkbox></div>
+            </div>
+        </div>
+        
+        <div class="cal-3-1" ng-show="HbAs_3 == true">
+            <div class="row" style="margin-bottom: 10px;">
+                <div class="col" style="background-color: #A4A6A8; color: #FFFFFF; padding-top: 10px;">IFG</div>
+                <div class="col col-75 item-icon-right" style="background-color: #35367E; color: #FFFFFF; padding-top: 10px;">HbA<sub>1C</sub> > 10</div>
+            </div>
+            <div class="row">
+                <div class="col" style="background-color: #FFD300; color: #000;">> 45</div>
+                <div class="col col-75 item-icon-right" style="padding: 0px"><ion-checkbox class="checkbox-assertive check1 item-checkbox-right" ng-model="HbA_2_2" ng-change="updateStorage(); figura_3_1_HbA_1_2(); recalcular()" style="background-color: #8BCA53; color: #000;">iSGLT-2<i class="icon ion-ios-arrow-right"></i></ion-checkbox></div>
+            </div>
+            <div class="row">
+                <div class="col" style="background-color: #FFD300; color: #000;">30-45<sup>b</sup></div>
+        
+                <div class="col col-75 item-icon-right" style="padding: 0px; padding-left: 50px;"><ion-checkbox class="checkbox-assertive check1 item-checkbox-right" ng-model="HbA_2_3" ng-change="updateStorage(); figura_3_1_HbA_2_3(); recalcular()" style="background-color: #DDECCC; color: #000;">aGLP1<i class="icon ion-ios-arrow-right"></i></ion-checkbox></div>
+            </div>
+            <div class="row">
+                <div class="col col-50" style="margin-right: -7px;"></div>
+                <div class="col col-50 item-icon-right" style="padding: 0px"><ion-checkbox class="checkbox-assertive check1 item-checkbox-right" ng-model="HbA_2_4" ng-change="updateStorage(); figura_3_1_HbA_2_4(); recalcular()" style="background-color: #DDECCC; color: #000;">iDPP-4<sup>c</sup><i class="icon ion-ios-arrow-right"></i></ion-checkbox></div>
+            </div>
+
+            <div class="row">
+                <div class="col" style="text-align: center; background-color: #FFD300; color: #000;">< 30</div>
+                <div class="col col-75 item-icon-right"  style="padding: 0px"><ion-checkbox class="checkbox-assertive check1 item-checkbox-right" ng-model="HbA_2_5" ng-change="updateStorage(); figura_3_1_HbA_2_5(); recalcular()" style="background-color: #AE3248; color: #FFFFFF;">Insulina prandial<i class="icon ion-ios-arrow-right"></i></ion-checkbox></div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="item item-text-wrap">
+                <h5>
+                    <sup>a</sup> Con IFG 30-45 ml/min/1,73 m<sup>2</sup>, metformina se puede utilizar en pacientes que ya la tomaban previamente. No se recomienda iniciarla en este rango.<br><br>
+                    <sup>b</sup> Ficha técnica: no deben iniciarse en pacientes con una TFGe inferior a 60 ml/min/1,73 m<sup>2</sup> o un CrCl < 60 ml/min. En pacientes que toleran iSGLT-2 o aGLP-1 y cuya TFGe se encuentra sistemáticamente
+                    por debajo de 60 ml/min/1,73 m2 o con un CrCl < 60 ml/min, se deben administrar con precaución.<br>
+                    El tratamiento debe interrumpirse cuando sistemáticamente la TGFe se encuentre por debajo
+                    de 45 ml/min/1,73 m<sup>2</sup> o el CrCl por debajo de 45 ml/min. Sin embargo, en ensayos clínicos estos
+                    fármacos han demostrado seguridad con FG por encima de 30 ml/min. En ensayos clínicos, se ha
+                    probado su seguridad hasta 30 ml/min/1,73 m<sup>2</sup> (esta información no está en ficha técnica).<br><br>
+                    <sup>c</sup> iDPP-4: ajuste de dosis según la función renal (esta información no está en ficha técnica).
+                </h5>
+            </div>
+        </div>
+
+
+    </ion-content>
+
+
+</ion-view>

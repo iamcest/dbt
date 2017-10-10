@@ -1,0 +1,56 @@
+
+
+<ion-view title="Situaciones especiales" id="page7">
+
+    <div class="bar bar-subheader cal-4">
+        <h2 class="title blanco">Hospitalización</h2>
+    </div>
+
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <div class="card" style="margin: 10px;">
+            <div class="item item-divider item-icon-left">
+                <i class="icon ion-ios-help-outline"></i>
+                Manejo
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-13')"class="item item-text-wrap">
+                Protocolo de actuación en el paciente diabético en las primeras 24 horas de hospitalización
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-14')"class="item item-text-wrap">
+                Protocolo de actuación en el paciente diabético tras las primeras 24 horas de hospitalización
+            </div>
+        </div>
+
+        <div class="card" style="margin: 10px;">
+            <div class="item item-divider item-icon-left">
+                <i class="icon ion-ios-help-outline"></i>
+                Planificación alta
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-15')"class="item item-text-wrap">
+                Tratamiento antidiabético al alta de hospitalización del paciente diabético
+            </div>
+        </div>
+        
+        <div class="card" style="margin: 10px;">
+            <div class="item item-divider item-icon-left">
+                <i class="icon ion-ios-help-outline"></i>
+                Metformina
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-16')"class="item item-text-wrap">
+                Manejo de la meftormina en diabéticos sometidos a estudios con contrastes yodados
+            </div>
+        </div>
+
+        <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2" ui-sref="menu.04-01">CONTINUAR</a>
+            </div>
+        </div>
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+    </ion-content>
+
+
+</ion-view>

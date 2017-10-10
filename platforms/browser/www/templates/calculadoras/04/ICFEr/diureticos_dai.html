@@ -1,0 +1,59 @@
+<div ng-controller="testCtrl">
+    <table class="table table-bordered table-striped" >
+        <tbody>
+            <tr>
+                <td style="font-size: 16px;" ng-controller="leyendaCtrl">¿Signos y/o síntomas de congestión? <a ng-click="openModal('m')"><i class="icon ion-help-circled"></i></a></td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="diureticos" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size: 16px;" ng-controller="leyendaCtrl">¿Implante de un DAI? <a ng-click="openModal('n')"><i class="icon ion-help-circled"></i></a></td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="dai" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="table-bordered" ng-show="diureticos == true">
+        <div class="item item-divider item-icon-left">
+            <i class="icon ion-ios-help-outline"></i>
+            Diuréticos
+        </div>
+        <div ng-controller="modalesVentanas" class="item item-text-wrap" ng-click="openModal('ctabla-2-13')">
+            Recomendaciones de uso de diuréticos en ICFEr
+        </div>
+        <div class="item item-text-wrap titulacion" ng-click="" ui-sref="menu.2tabla-2-14">
+            <i class="icon ion-android-checkmark-circle"></i> Titulación diuréticos de asa
+        </div>
+        <div  class="item item-text-wrap titulacion" ng-click="" ui-sref="menu.2tabla-2-15">
+            <i class="icon ion-android-checkmark-circle"></i> Titulación diuréticos tiazídicos
+        </div>
+        <div class="item item-text-wrap titulacion" ng-click="" ui-sref="menu.2tabla-2-16">
+            <i class="icon ion-android-checkmark-circle"></i> Titulación diuréticos ahorradores de potasio
+        </div>
+    </div>
+
+    <div class="table-bordered" ng-show="dai == true">
+
+        <div class="item item-divider item-icon-left">
+            <i class="icon ion-ios-help-outline"></i>
+            DAI
+        </div>
+        <div ng-controller="modalesVentanas" class="item item-text-wrap" ng-click="openModal('ctabla-2-28')">
+            Recomendaciones para el implante de un DAI en pacientes con insuficiencia cardiaca
+        </div>
+
+    </div>
+
+</div>

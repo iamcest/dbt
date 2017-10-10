@@ -1,0 +1,109 @@
+<div class="item item-divider">
+    Tratamiento con IECA o ARA II
+</div>
+<!-- IECA -->
+<table style="margin-bottom: 0px;" class="table table-bordered table-striped" ng-controller="testCtrl" ng-if="Captopril == true || Enalapril == true || Lisinopril == true || Ramipril == true || Trandopril == true">
+
+    <tbody>
+    <thead style="background-color: #B84E00; color: #EEEEEE;">
+        <tr>
+            <th>IECA</th>
+            <th>Dosis inicio (mg)</th>
+            <th>Dosis objetivo (mg)</th>
+        </tr>
+    </thead>
+    <tr ng-if="Captopril == true">
+        <td>Captopril</td>
+        <td>6.25 mg/8 h</td>
+        <td>50 mg/8 h</td>
+    </tr>
+    <tr ng-if="Enalapril == true">
+        <td>Enalapril</td>
+        <td>2,5 mg/12 h</td>
+        <td>10-20 mg/12 h</td>
+    </tr>
+    <tr ng-if="Lisinopril == true">
+        <td>Lisinopril</td>
+        <td>2,5-5 mg/24 h</td>
+        <td>20-35 mg/24 h</td>
+    </tr>
+    <tr ng-if="Ramipril == true">
+        <td>Ramipril</td>
+        <td>2,5 mg/24 h</td>
+        <td>5 mg/12 h<br>10 mg/24 h</td>
+    </tr>
+    <tr ng-if="Trandopril == true">
+        <td>Trandopril</td>
+        <td>0,5 mg/24 h</td>
+        <td>4 mg/24 h</td>
+    </tr>
+
+
+</tbody>
+</table>
+<!-- ARA II -->
+<table style="margin-bottom: 0px;" class="table table-bordered table-striped" ng-controller="testCtrl" ng-if="Candesartan == true || Valsartan == true || Losartan == true">
+
+    <tbody>
+    <thead style="background-color: #B84E00; color: #EEEEEE;">
+        <tr>
+            <th>ARA II</th>
+            <th>Dosis inicio (mg)</th>
+            <th>Dosis objetivo (mg)</th>
+        </tr>
+    </thead>
+    <tr ng-if="Candesartan == true">
+        <td>Candesartán</td>
+        <td>4-8 mg/24 h</td>
+        <td>32 mg/24 h</td>
+    </tr>
+    <tr ng-if="Valsartan == true">
+        <td>Valsartán</td>
+        <td>40 mg/12 h</td>
+        <td>160 mg/12 h</td>
+    </tr>
+    <tr ng-if="Losartan == true">
+        <td>Losartán</td>
+        <td>25-50 mg/24 h</td>
+        <td>20-35 mg/24 h</td>
+    </tr>
+
+</tbody>
+</table>
+
+<div class="item item-divider">
+    Tratamiento con betabloqueante
+</div>
+<table style="margin-bottom: 0px;" class="table table-bordered table-striped" ng-controller="testCtrl" ng-if="Bisoprolol == true || Carvedilol == true || Metoprolol == true || Nebivolol == true">
+
+    <tbody>
+    <thead style="background-color: #B84E00; color: #EEEEEE;">
+        <tr>
+            <th>Betabloqueante</th>
+            <th>Dosis inicio (mg)</th>
+            <th>Dosis objetivo (mg)</th>
+        </tr>
+    </thead>
+    <tr ng-if="Bisoprolol == true">
+        <td>Bisoprolol</td>
+        <td>1,25 mg/24 h</td>
+        <td>10 mg/24 h</td>
+    </tr>
+    <tr ng-if="Carvedilol == true">
+        <td>Carvedilol</td>
+        <td>3,125 mg/12 h</td>
+        <td>25-50 mg/12 h</td>
+    </tr>
+    <tr ng-if="Metoprolol == true">
+        <td>Metoprolol CR/XL</td>
+        <td>12,5 o 25 mg/24 h</td>
+        <td>200 mg/24 h</td>
+    </tr>
+    <tr ng-if="Nebivolol == true">
+        <td>Nebivolol</td>
+        <td>1,25 mg/24 h</td>
+        <td>10 mg/24 h</td>
+    </tr>
+
+</tbody>
+</table>

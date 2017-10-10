@@ -1,0 +1,21 @@
+{
+  "name": "ICapp",
+  "version": "1.0",
+  "description": "ICapp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phonegap/phonegap-app-hello-world.git"
+  },
+  "author": "PhoneGap Team",
+  "license": "Apache-2.0",
+  "keywords": [
+    "ecosystem:phonegap",
+    "ecosystem:cordova",
+    "cordova:template",
+    "phonegap:template"
+  ],
+  "bugs": {
+    "url": "https://github.com/phonegap/phonegap-app-hello-world/issues"
+  },
+  "homepage": "https://github.com/phonegap/phonegap-app-hello-world"
+}

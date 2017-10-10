@@ -1,0 +1,32 @@
+<ion-view title="Situaciones especiales" id="page6" >
+
+    <div class="bar bar-subheader cal-4">
+        <h2 class="title blanco">Insuficiencia cardiaca</h2>
+    </div>
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="verControler">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <div >
+            <div class="titulo-cal" style="text-align: center" ng-controller="leyendaCtrl">Tratamiento con <a ng-click="openModal('d', 'e')">IECA<sup><i class="icon ion-help-circled"></i></sup></a> y <a ng-click="openModal('f', 'g')">betabloqueante<sup><i class="icon ion-help-circled"></i></sup></a></div>
+
+            <div class="card">
+
+                <div style="padding: 10px;" ng-include src="'templates/calculadoras/04/ICFEr/diureticos_dai.html'"></div>
+                
+                <div class="button-bar" style="padding: 10px;">
+                    <a class="button button-calm button2" ui-sref="menu.2-icfer-01-3" >Continuar</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+    </ion-content>
+
+
+</ion-view>
+

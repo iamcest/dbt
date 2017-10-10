@@ -1,0 +1,28 @@
+<div class="item item-divider">
+    Tratamiento con ARM
+</div>
+<table style="margin-bottom: 0px;" class="table table-bordered table-striped" ng-controller="testCtrl" ng-if="Espironolactona == true || Eplerenona == true">
+
+    <tbody>
+    <thead style="background-color: #B84E00; color: #EEEEEE;">
+        <tr>
+            <th>ARM</th>
+            <th>Dosis inicio (mg)</th>
+            <th>Dosis objetivo (mg)</th>
+        </tr>
+    </thead>
+    <tr ng-if="Espironolactona == true">
+        <td>Espironolactona</td>
+        <td>25 mg/24 h</td>
+        <td>25-50 mg/24 h</td>
+
+    </tr>
+    <tr ng-if="Eplerenona == true">
+        <td>Eplerenona</td>
+        <td>25 mg/24 h</td>
+        <td>25-50 mg/24 h</td>
+    </tr>
+
+
+</tbody>
+</table>

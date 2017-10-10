@@ -1,0 +1,167 @@
+<ion-modal-view id="modal-grande" style="background-color:  #EEEEEE;">
+
+
+
+    <ion-header-bar class="bar bar-calm">
+        <h1 class="title">Contraindicaciones</h1>
+        <button class="button button-icon icon-left ion-ios-close-outline button-primary" ng-click="closeModal()"></button>
+    </ion-header-bar>
+
+    <ion-content>
+        <!-- IECA -->
+        <table class="table table-bordered table-striped" ng-if="contra == 1">
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th colspan="2"><b>Captopril</b></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Contraindicaciones</td>
+                <td>
+            <li>Hipersensibilidad o tos por IECAs
+            <li>Estenosis bilateral de la arteria renal
+            <li>Edema angioneurótico hereditario
+            <li>Segundo / tercer mes de embarazo y lactancia</li>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-bordered table-striped" ng-if="contra == 2">
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th colspan="2"><b>Enalapril</b></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Contraindicaciones</td>
+                <td>
+            <li>Hipersensibilidad o tos por IECAs
+            <li>Estenosis bilateral de la arteria renal
+            <li>Edema angioneurótico hereditario
+            <li>Segundo / tercer mes de embarazo y lactancia</li>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+        <table class="table table-bordered table-striped" ng-if="contra == 3">
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th colspan="2"><b>Ramipril</b></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Contraindicaciones</td>
+                <td>
+            <li>Hipersensibilidad o tos por IECAs
+            <li>Estenosis bilateral de la arteria renal
+            <li>Edema angioneurótico hereditario
+            <li>Segundo / tercer mes de embarazo y lactancia</li>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+
+        <!-- ARA II -->
+        <table class="table table-bordered table-striped" ng-if="contra == 4">
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th colspan="2"><b>Losartan, Telmisartan, Irbesartan, Candesartan, Olmesartan, Valsartan</b></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Contraindicaciones</td>
+                <td>
+            <li>Hipersensibilidad a ARA II.
+            <li>Insuficiencia hepática grave / cirrosis biliar y colectasis (obstrucción biliar). 
+            <li>Angioedema hereditario / Estenosis bilateral arteria renal
+            <li>Segundo / tercer mes de embarazo y lactancia
+            </li>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!--Betabloqueantes -->
+        <table class="table table-bordered table-striped" ng-if="contra == 5">
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th colspan="2"><b>En insuficiencia cardíaca y disfunción ventricular:<br>BISOPROLOL, CARVEDILOL, METOPROLOL, NEVIBOLOL</b></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Contraindicaciones</td>
+                <td>
+            <li>Asma bronquial
+            <li>Bradicardia <50 lpm
+            <li>BAV de 2 o 3 grado
+            <li>Shock cardiogénico
+            <li>Angina de Prinzmetal
+            <li>Feocromocitoma (en ausencia de bloqueo alfa previo)</li>
+
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!--ARM -->
+        <table class="table table-bordered table-striped" ng-if="contra == 6">
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th colspan="2"><b>Eplerenona</b></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Contraindicaciones</td>
+                <td>
+            <li>Potasio sérico > 5,0 mmol/L al inicio del tratamiento.
+            <li>Insuficiencia renal moderada a grave (aclaramiento de creatinina < 50 mL/min).
+            <li>Insuficiencia hepática grave (Child-Pugh Clase C).
+            <li>Tratamiento concomitante con diuréticos ahorradores de potasio, suplementos de potasio o con inhibidores potentes del CYP3A4<sup>a</sup>.
+            </li>
+
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-bordered table-striped" ng-if="contra == 7">
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th colspan="2"><b>Espironolactona</b></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Contraindicaciones</td>
+                <td>
+            <li>Insuficiencia renal grave
+                <li>Anuria
+                <li>Hiperpotasemia
+                <li>Enfermedad de Addison
+            </li>
+
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+
+    </ion-content>
+
+
+</ion-modal-view>

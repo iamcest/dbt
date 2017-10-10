@@ -1,0 +1,51 @@
+@media screen and (min-width:500px){ 
+
+    #login-form1 {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #login-invitado {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .zoom-pane {
+
+        height: 100% !important;
+    }
+    .zoom-pane img {
+        width: 100% !important;
+    }
+
+}
+@media screen and (min-width:750px){ 
+
+    /* Modal grande */
+    #modal-grande {
+        left: 0%;
+        right: 0%;
+        width: 650px; 
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+}
+
+@media screen and (min-width:800px){ 
+
+
+    .buttons-right {
+        visibility:  hidden;
+    }
+
+}
+@media screen and (max-width:500px){ 
+    #calculadora {
+        width: 100% !important;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+

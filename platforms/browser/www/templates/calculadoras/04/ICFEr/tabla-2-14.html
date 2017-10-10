@@ -1,0 +1,77 @@
+<ion-view title="IC aguda" id="page7" style="background-color:  #EEEEEE;">
+
+    <div class="bar bar-subheader cal-2">
+        <h2 class="title blanco">Diurético de asa</h2>
+    </div>
+
+
+    <ion-content>
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <table class="table table-bordered table-striped" ng-controller="testCtrl">
+
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th>Diurético de asa</th>
+                    <th>Dosis de inicio</th>
+                    <th>Dosis diaria</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Furosemida</td>
+                <td>20-40 mg/día</td>
+                <td>40-240 mg/día</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Furosemida" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Torasemida</td>
+                <td>5-10 mg/día</td>
+                <td>10-20 mg/día</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Torasemida" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <table class="table table-bordered table-striped">
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th colspan="2"><b>Diurético de asa</b></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Contraindicaciones</td>
+                <td>
+            <li>Hipovolemia o deshidratación
+            <li>Hipocalcemia e hiponatremia severas
+            <li>Encefalopatía hepática. 
+            <li>Lactancia
+            </li>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="button-bar" style="padding: 10px;">
+            <a  class="button button-calm button2"  ng-controller="testCtrl" ng-click="myGoBack()">CONTINUAR</a>
+        </div>
+
+    </ion-content>
+
+
+</ion-view>

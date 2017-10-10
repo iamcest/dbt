@@ -1,0 +1,55 @@
+<ion-view title="Login" hide-nav-bar="true" id="page6">
+    
+    <ion-content padding="true"  class="manual-ios-statusbar-padding" ng-controller="ProtectedController3">
+        
+        <div id="logo-login"><img src="img/logo-icapp-login.png"></div>
+        
+        <hr class="linea-login">
+        
+        <div id="logo-login"><img src="img/logo-cardiologia-login.png"></div>
+        
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+        
+        <form id="login-form1" class="list" ng-controller="postController">
+            <ion-list id="login-list2">
+                <label class="item item-input-login" id="login-input1">
+                    <input class="input-login" type="text" ng-model="txtUsuario" placeholder="NIF">
+                </label>
+                <label class="item item-input-login" id="login-input2">
+                    <input class="input-login" type="password" ng-model="txtContrasena" placeholder="Contraseña">
+                </label>
+            </ion-list>
+            <!--<a ng-controller="recuperar" id="login-button6" class="button button-stable  button-block button-clear" ng-click="openModal()">He olvidado mi contraseña</a> -->
+            <a id="login-button6" class="button button-stable  button-block button-clear" a onclick="window.open('http://socios.secardiologia.es/reset/', '_blank', 'location=yes')">He olvidado mi contraseña</a>
+
+            
+            <a id="login-button5" class="boton-login" ng-click="entrar()">Acceder</a>
+
+            <div class="spacer" style="height: 0px;"></div>
+
+        </form>
+
+        <div class="invitado">
+            <form id="login-invitado" class="list" ng-controller="invitadoController">
+                
+                <h3 class="titulo_login">No socios</h3>
+                
+                <div class="spacer" style="height: 20px;"></div>
+                
+                <ion-list id="login-list2">
+                    <label class="item item-input-invitado" id="login-input1">
+                        <input class="input-invitado" type="text" ng-model="txtInvitado" placeholder="CÓDIGO" >
+                    </label>
+                </ion-list>
+                
+                <div class="spacer" style="height: 20px;"></div>
+                
+                <a id="login-button5" class="boton-login" ng-click="entrar1()">Acceder</a>
+
+            </form>
+            
+            <div class="spacer" style="height: 20px;"></div>
+
+        </div>
+    </ion-content>
+</ion-view>

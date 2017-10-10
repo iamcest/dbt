@@ -1,0 +1,133 @@
+<ion-view title="Diagnóstico. Gestión integral" id="page6">
+
+    <div class="bar bar-subheader cal-1">
+        <h2 class="title blanco">Diagnóstico de la diabetes</h2>
+    </div>
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 70px;"></div>
+        
+        <div class="titulo-acordeon" style="background-color: #E63400 !important" >Diagnóstico de prediabetes</div> 
+        
+        <table  class="table table-bordered table-striped" style="margin: 0px;">
+
+            <tbody>
+            <thead style="background-color:  #E63400; color: #EEEEEE;">
+                <tr>
+                    <th>Categoría de prediabetes</th>
+                    <th>Test</th>
+                    <th>Resultado</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Glucosa en ayunas alterada</td>
+                <td>GPA</td>
+                <td>100-125 mg/dL<br>(5,6-6,9 mmol/L)</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="t1_4_1" ng-change="updateStorage(); ct1_4_1(); reset1_5()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Intolerancia a la glucosa</td>
+                <td>GP2h con 75 gr TTOG</td>
+                <td>140-199 mg/dL<br>(7,8-11 mmol/L)</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="t1_4_2" ng-change="updateStorage(); ct1_4_2(); reset1_5()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Prediabetes</td>
+                <td>HbA1c (%)</td>
+                <td>5,7-6,4%<br>(39-47 mmol/mol)</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="t1_4_3" ng-change="updateStorage(); ct1_4_3(); reset1_5()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+        
+        <div class="spacer" style="width: 300px; height: 40px;"></div>
+
+        <div class="titulo-acordeon" style="background-color: #E63400 !important" >Criterios para el diagnóstico de diabetes</div>
+
+        <table  class="table table-bordered table-striped" style="margin: 0px;">
+
+
+            <tr>
+                <td>FPG ≥126 mg / dl (7.0 mmol / L). Ayuno se define como no ingesta calórica durante por lo menos 8 h. <sup>*</sup></td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="t1_5_1" ng-change="updateStorage(); ct1_5()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>2-h PG ≥200 mg / dl (11,1 mmol / L) durante un OGTT. La prueba debe realizarse como se describe por la OMS, utilizando una carga de glucosa que contiene el equivalente de 75 g de glucosa anhidra disuelta en agua. <sup>*</sup></td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="t1_5_2" ng-change="updateStorage(); ct1_5()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>A1C ≥6.5% (48 mmol / mol). La prueba se debe realizar en un laboratorio usando un método que está certificado NGSP y estandarizado para el ensayo DCCT. <sup>*</sup></td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="t1_5_3" ng-change="updateStorage(); ct1_5()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>2-h PG ≥200 mg / dl (11,1 mmol / L) durante un OGTT. La prueba debe realizarse como se describe por la OMS, utilizando una carga de glucosa que contiene el equivalente de 75 g de glucosa anhidra disuelta en agua. <sup>*</sup>En un paciente con síntomas clásicos de la hiperglucemia o crisis hiperglucémico, una glucosa plasmática al azar ≥200 mg / dl (11,1 mmol / L).</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="t1_5_4" ng-change="updateStorage(); ct1_5()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>        
+        
+
+        <div class="card">
+            <div class="item item-text-wrap">
+                <h3><sup>*</sup> En ausencia de hiperglucemia inequívoca, los resultados deben ser confirmados por pruebas repetidas.</h3>
+            </div>
+        </div>
+
+
+
+        <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2" ng-click="myGoBack()">CONTINUAR</a>
+            </div>
+        </div>
+
+    </ion-content>
+
+
+</ion-view>
+

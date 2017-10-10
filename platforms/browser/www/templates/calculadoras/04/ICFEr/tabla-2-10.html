@@ -1,0 +1,106 @@
+<ion-view title="IC aguda" id="page7" style="background-color:  #EEEEEE;">
+
+    <div class="bar bar-subheader cal-2">
+        <h2 class="title blanco">Titulación betabloqueantes</h2>
+    </div>
+
+
+    <ion-content>
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <table class="table table-bordered table-striped" ng-controller="testCtrl">
+
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th>Betabloqueante</th>
+                    <th>Dosis inicio (mg)</th>
+                    <th>Dosis objetivo (mg)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Bisoprolol</td>
+                <td>1,25 mg/24 h</td>
+                <td>10 mg/24 h</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Bisoprolol" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Carvedilol</td>
+                <td>3,125 mg/12 h</td>
+                <td>25-50 mg/12 h</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Carvedilol" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Metoprolol CR/XL</td>
+                <td>12,5 o 25 mg/24 h</td>
+                <td>200 mg/24 h</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Metoprolol" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Nebivolol</td>
+                <td>1,25 mg/24 h</td>
+                <td>10 mg/24 h</td>
+                <td><label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="Nebivolol" ng-change="updateStorage()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <!--Betabloqueantes -->
+        <table class="table table-bordered table-striped">
+            <tbody>
+            <thead style="background-color: #B84E00; color: #EEEEEE;">
+                <tr>
+                    <th colspan="2"><b>Betabloqueante</b></th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Contraindicaciones</td>
+                <td>
+            <li>Asma bronquial
+            <li>Bradicardia <50 lpm
+            <li>BAV de 2 o 3 grado
+            <li>Shock cardiogénico
+            <li>Angina de Prinzmetal
+            <li>Feocromocitoma (en ausencia de bloqueo alfa previo)</li>
+
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="button-bar" style="padding: 10px;">
+            <a  class="button button-calm button2"  ng-controller="testCtrl" ng-click="myGoBack()">CONTINUAR</a>
+        </div>
+
+
+
+    </ion-content>
+
+
+</ion-view>

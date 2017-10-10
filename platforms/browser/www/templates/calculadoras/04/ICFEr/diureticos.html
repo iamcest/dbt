@@ -1,0 +1,84 @@
+<div class="item item-divider">
+    Tratamiento con Diuréticos
+</div>
+<table style="margin-bottom: 0px;" class="table table-bordered table-striped" ng-controller="testCtrl" ng-if="Furosemida == true || Torasemida == true">
+
+    <tbody>
+    <thead style="background-color: #B84E00; color: #EEEEEE;">
+        <tr>
+            <th>Diurético de asa</th>
+            <th>Dosis de inicio</th>
+            <th>Dosis diaria</th>
+        </tr>
+    </thead>
+    <tr ng-if="Furosemida == true">
+        <td>Furosemida</td>
+        <td>20-40 mg/día</td>
+        <td>40-240 mg/día</td>
+    </tr>
+    <tr ng-if="Torasemida == true">
+        <td>Torasemida</td>
+        <td>5-10 mg/día</td>
+        <td>10-20 mg/día</td>
+    </tr>
+
+</tbody>
+</table>
+
+<table style="margin-bottom: 0px;" class="table table-bordered table-striped" ng-controller="testCtrl" ng-if="Hidroclorotiazida == true || Metolazona == true || Indapamida == true">
+
+    <tbody>
+    <thead style="background-color: #B84E00; color: #EEEEEE;">
+        <tr>
+            <th>Diurético tiazídico</th>
+            <th>Dosis de inicio</th>
+            <th>Dosis diaria</th>
+        </tr>
+    </thead>
+    <tr ng-if="Hidroclorotiazida == true">
+        <td>Hidroclorotiazida</td>
+        <td>25 mg/día</td>
+        <td>12,5-100 mg/día</td>
+    </tr>
+    <tr ng-if="Metolazona == true">
+        <td>Metolazona</td>
+        <td>2,5 mg/día</td>
+        <td>2,5-10 mg/día</td>
+    </tr>
+    <tr ng-if="Indapamida == true">
+        <td>Indapamida</td>
+        <td>2,5 mg/día</td>
+        <td>2,5-5 mg/día</td>
+    </tr>
+
+</tbody>
+</table>
+
+<table style="margin-bottom: 0px;" class="table table-bordered table-striped" ng-controller="testCtrl" ng-if="Espironolactona_Eplerenona == true || Amilorida == true || Triamtereno == true">
+
+    <tbody>
+    <thead style="background-color: #B84E00; color: #EEEEEE;">
+        <tr>
+            <th>Diurético ahorrador de potasio</th>
+            <th>Dosis de inicio</th>
+            <th>Dosis diaria</th>
+        </tr>
+    </thead>
+    <tr ng-if="Espironolactona_Eplerenona == true">
+        <td>Espironolactona/<br>Eplerenona</td>
+        <td>12,5-25 mg<sup>a</sup>/día<br>50 mg/día</td>
+        <td>50 mg<sup>a</sup>/día<br>100-200 mg/día</td>
+    </tr>
+    <tr ng-if="Amilorida == true">
+        <td>Amilorida</td>
+        <td>2,5 mg<sup>a</sup>/día<br>5 mg/día</td>
+        <td>5-10 mg<sup>a</sup>/día<br>10-20 mg/día</td>
+    </tr>
+    <tr ng-if="Triamtereno == true">
+        <td>Triamtereno</td>
+        <td>25 mg<sup>a</sup>/día<br>50 mg/día</td>
+        <td>100 mg<sup>a</sup>/día<br>200 mg/día</td>
+    </tr>
+
+</tbody>
+</table>

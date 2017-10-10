@@ -1,0 +1,69 @@
+
+
+<ion-view title="Situaciones especiales" id="page7">
+
+    <div class="bar bar-subheader cal-4">
+        <h2 class="title blanco">Fármacos</h2>
+    </div>
+
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <div class="card" style="margin: 10px;">
+            <div class="item item-divider item-icon-left">
+                <i class="icon ion-ios-help-outline"></i>
+                Consultas
+            </div>
+            <div ng-controller="modalVademecum" ng-click="openModal()" class="item item-text-wrap">
+                Vademecum
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-19')"class="item item-text-wrap">
+                Contraindicaciones absolutas para el uso de los fármacos antidiabéticos
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-12')"class="item item-text-wrap">
+                Recomendación de uso de antidiabéticos en insuficiencia cardiaca y enfermedad cardiovascular
+            </div>
+
+        </div>
+
+        <div class="card" style="margin: 10px;">
+            <div class="item item-divider item-icon-left">
+                <i class="icon ion-ios-help-outline"></i>
+                Interacciones
+            </div>
+            <div ng-click=""  ui-sref="menu.4-interacciones({ idCat: 1 })" class="item item-text-wrap titulacion">
+                <i class="icon ion-android-checkmark-circle"></i> Sulfonilureas 
+            </div>
+            <div ng-click=""  ui-sref="menu.4-interacciones({ idCat: 2 })" class="item item-text-wrap titulacion">
+                <i class="icon ion-android-checkmark-circle"></i> Metformina 
+            </div>
+            <div ng-click=""  ui-sref="menu.4-interacciones({ idCat: 3 })" class="item item-text-wrap titulacion">
+                <i class="icon ion-android-checkmark-circle"></i> Glitazonas
+            </div>
+            <div ng-click=""  ui-sref="menu.4-interacciones({ idCat: 4 })" class="item item-text-wrap titulacion">
+                <i class="icon ion-android-checkmark-circle"></i> Inhibidores de la enzima dipeptidilpeptidasa tipo 4
+            </div>
+            <div ng-click=""  ui-sref="menu.4-interacciones({ idCat: 5 })" class="item item-text-wrap titulacion">
+                <i class="icon ion-android-checkmark-circle"></i> Glinidas
+            </div>
+            <div ng-click=""  ui-sref="menu.4-interacciones({ idCat: 6 })" class="item item-text-wrap titulacion">
+                <i class="icon ion-android-checkmark-circle"></i> Análogos del péptido semejante al glucagón tipo 1 
+            </div>
+            <div ng-click=""  ui-sref="menu.4-interacciones({ idCat: 7 })" class="item item-text-wrap titulacion">
+                <i class="icon ion-android-checkmark-circle"></i> Inhibidores del cotransportador sodio-glucosa tipo 2
+            </div>
+            
+        </div>
+
+        <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2" ui-sref="menu.04-01">CONTINUAR</a>
+            </div>
+        </div>
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+    </ion-content>
+
+
+</ion-view>

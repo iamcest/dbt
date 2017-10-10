@@ -1,0 +1,91 @@
+
+
+<ion-view title="Objetivo y control global" id="page7">
+
+    <div class="bar bar-subheader cal-2">
+        <h2 class="title blanco">Control de la PA</h2>
+    </div>
+
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <div class="titulo-cal" style="text-align: center">Algoritmo de uso de los fármacos hipolipemiantes para alcanzar el objetivo de cLDL recomendado</div>
+
+
+
+        <div class="card">
+            <div class="item item-divider " style="text-align: center !important;">
+                Paciente no está en objetivo de cLDL según su RCV
+            </div>
+            <ul class="list" style="margin-bottom: 0px;">
+
+                <li class="item item-toggle item-checkbox1">
+                    ESTATINAS
+                    <label class="toggle toggle-calm">
+                        <input type="checkbox" ng-model="f2_8_1" ng-change="updateStorage(); cf2_8_1(); recalcular()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="card" ng-show="f2_8_1 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                ¿Alcanza objetivo?
+            </div>
+            <div class="button-bar" style="padding: 10px;">
+                <a class="button button-calm button2"  ng-show="f2_8_3 != false" ng-click="updateStorage(); cf2_8_3(); recalcular()">No</a>
+                <a class="button button-balanced button2" ng-show="f2_8_no != false" ng-click="updateStorage(); cf2_8_no(); recalcular()">Sí</a>
+            </div>
+        </div>
+        <div class="card" ng-show="f2_8_3 == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                Asociar EZETIMIBE<br>¿Alcanza objetivo?
+            </div>
+            <div class="button-bar" style="padding: 10px;">
+                <a class="button button-calm button2" ng-show="f2_8_1_si != false" ng-click="updateStorage(); cf2_8_1_si(); recalcular()">No</a>
+                <a class="button button-balanced button2" ng-show="f2_8_1_no != false" ng-click="updateStorage(); cf2_8_1_no(); recalcular()">Sí</a>
+            </div>
+        </div>
+        <div class="card" class="card" ng-show="f2_8_1_si == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                Asociar iCPSK9<br>¿Alcanza objetivo?
+            </div>
+            <div class="button-bar" style="padding: 10px;">
+                <a class="button button-calm button2"  ng-show="f2_8_2_si != false" ng-click="updateStorage(); cf2_8_2_si(); recalcular()">No</a>
+                <a class="button button-balanced button2" ng-show="f2_8_2_no != false" ng-click="updateStorage(); cf2_8_2_no(); recalcular()">Sí</a>
+            </div>
+        </div>
+        <div class="card" class="card" ng-show="f2_8_2_si == true">
+            <div class="item item-divider " style="text-align: center !important;">
+                Asociar RESINAS o FIBRATOS
+            </div>
+        </div>
+
+        <div class="card" class="card" ng-show="f2_8_no == true || f2_8_1_no == true || f2_8_2_no == true">
+            <div class="item item-divider " style="text-align: center !important; padding-top: 15px; padding-bottom: 15px;">
+                
+                Mantener tratamiento
+                
+            </div>
+        </div>
+
+        <div class="card" class="table-bordered" ng-show="f2_8_no == true || f2_8_1_no == true || f2_8_2_no == true || f2_8_2_si == true">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2" ng-click="myGoBack()">FINALIZAR</a>
+            </div>
+        </div>
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+
+
+
+    </ion-content>
+
+
+</ion-view>

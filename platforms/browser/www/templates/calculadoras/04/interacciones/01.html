@@ -1,0 +1,56 @@
+
+
+<ion-view title="Situaciones especiales" id="page7">
+
+    <div class="bar bar-subheader cal-4">
+        <h2 class="title blanco">Interacciones</h2>
+    </div>
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="interaccionesCtrl">
+
+        <div class="spacer" style="width: 300px; height: 70px;"></div>
+
+        <div class="titulo-cal" style="text-align: center">{{nombreCat}}</div>
+
+        <div class="card">
+            <div class="item item-divider " style="text-align: center !important;">
+                Relevancia clínica
+            </div>
+            <div class="row" style="margin-left: 0px;">
+                <div class="col"><i class="icon  {{logo_relevancia}}" style="color: {{alta}}; font-size: 30px;"></i> <br>Alta</div>
+                <div class="col"><i class="icon  {{logo_relevancia}}" style="color: {{leve}}; font-size: 30px;"></i> <br>Leve</div>
+                <div class="col"><i class="icon  {{logo_relevancia}}" style="color: {{moderada}}; font-size: 30px;"></i> <br>Moderada</div>
+                <div class="col"><i class="icon  {{logo_relevancia}}" style="color: {{incierta}}; font-size: 30px;"></i> <br>Incierta</div>
+            </div>
+        </div>
+
+        <div style="visibility: hidden; margin-top: -50px;">
+            <input type="text" ng-model="idCat" value='{{idCat}}'/>
+        </div>
+
+        <div class="card">
+            <div class="item item-divider " style="text-align: center !important;">
+                Fármacos
+            </div>
+
+            <ion-list id="menu-null">
+                <ion-item ng-repeat="listado in countSelected| filter:{idCat:idCat}" id="menu-list-item1" ui-sref="menu.4-interacciones/detalle({ idCat: {{listado.idCat}}, id: {{listado.id}} })"  class="item-icon-right item-icon-left">
+                    <i class="icon {{logo_relevancia}}" style="color: {{listado.relevancia}}"></i>
+                    {{listado.name}}
+                    <i class="icon ion-ios-arrow-right"></i>
+                </ion-item>
+            </ion-list>
+
+        </div>
+
+        <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2"  ui-sref="menu.04-01-06">Continuar</a>
+            </div>
+        </div> 
+        <div class="spacer" style="width: 300px; height: 30px;"></div>
+
+    </ion-content>
+
+
+</ion-view>

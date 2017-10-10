@@ -1,0 +1,57 @@
+
+
+<ion-view title="Situaciones especiales" id="page7">
+
+    <div class="bar bar-subheader cal-4">
+        <h2 class="title blanco">Insuficiencia cardiaca</h2>
+    </div>
+
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+        <div class="card" style="margin: 10px;">
+            <div class="item item-divider item-icon-left">
+                <i class="icon ion-ios-help-outline"></i>
+                Consultas
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-9')"class="item item-text-wrap">
+                Fisiopatología de los fenotipos de la insuficiencia cardiaca en diabetes
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-10')"class="item item-text-wrap">
+                Criterios diagnósticos de los fenotipos de la miocardiopatía diabética
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-12')"class="item item-text-wrap">
+                Recomendación de uso de antidiabéticos en insuficiencia cardiaca y enfermedad cardiovascular
+            </div>
+
+        </div>
+
+        <div class="card" style="margin: 10px;">
+            <div class="item item-divider item-icon-left">
+                <i class="icon ion-ios-help-outline"></i>
+                Tratamiento
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-11')"class="item item-text-wrap">
+                Recomendaciones de tratamiento para pacientes con insuficiencia cardiaca con fracción de eyección preservada
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('tabla-4-10')"class="item item-text-wrap">
+                Criterios diagnósticos de los fenotipos de la miocardiopatía diabética
+            </div>
+            <div ng-click=""  ui-sref="menu.2-icfer-01" class="item item-text-wrap titulacion">
+                <i class="icon ion-android-checkmark-circle"></i> Algoritmo terapéutico en pacientes con insuficiencia cardiaca sintomática con fracción de eyección reducida
+            </div>
+
+        </div>
+
+        <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2" ui-sref="menu.04-01">CONTINUAR</a>
+            </div>
+        </div>
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+    </ion-content>
+
+
+</ion-view>

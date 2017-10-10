@@ -1,0 +1,81 @@
+<ion-view title="Situaciones especiales" id="page6">
+
+    <div class="bar bar-subheader cal-4">
+        <h2 class="title blanco">Insuficiencia cardiaca</h2>
+    </div>
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="verControler">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+
+        <div ng-controller="testCtrl">
+            <div class="titulo-cal" style="text-align: center">Recomendaciones de tratamiento</div>
+
+            <div class="card" ng-include src="'templates/calculadoras/04/ICFEr/ieca_final.html'" ng-if="sacubitrilo1 != true && sacubitrilo2 != true"></div>
+            <div class="card" ng-include src="'templates/calculadoras/04/ICFEr/betabloqueante_final.html'" ng-controller="testCtrl" ng-if="sacubitrilo1 == true || sacubitrilo2 == true"></div>
+            <div class="card" ng-include src="'templates/calculadoras/04/ICFEr/arm_final.html'"></div>
+            <div class="card" ng-include src="'templates/calculadoras/04/ICFEr/inra_final.html'"></div>         
+            <div class="card" ng-include src="'templates/calculadoras/04/ICFEr/ivabradina_final.html'"></div>            
+            <div class="card">
+                <div class="item item-divider">
+                    Implante de una TRC
+                </div>
+                <div id="img-BRI-150" style="padding: 10px; text-align: center;" ng-if="trc_1 == true">
+                    <div>BRI ≥ 150 ms</div>
+                    <img src="img/ICFEr/trc1.png" width="160">
+                </div>
+                <div id="img-BRI-150" style="padding: 10px; text-align: center;" ng-if="trc_2 == true">
+                    <div>BRI 130-149 ms</div>
+                    <img src="img/ICFEr/trc2.png" width="160">
+                </div>
+                <div id="img-BRI-150" style="padding: 10px; text-align: center;" ng-if="trc_3 == true">
+                    <div>No BRI ≥ 150 ms</div>
+                    <img src="img/ICFEr/trc3.png" width="160">
+                </div>
+                <div id="img-BRI-150" style="padding: 10px; text-align: center;" ng-if="trc_4 == true">
+                    <div>No BRI 130-149 ms</div>
+                    <img src="img/ICFEr/trc4.png" width="160">
+                </div>
+            </div>
+
+            <div class="card" ng-show="digoxina == true">
+                <div class="item item-divider">
+                    Digoxina o hidralazina + DIS o DAVI, o trasplante cardiaco.
+                </div>
+                <table class="table table-bordered table-striped" style="margin-bottom: 0px;">
+                    <tbody>
+                    <thead style="background-color: #B84E00; color: #EEEEEE;">
+                        <tr>
+                            <th>Titulación digoxina</th>
+                            <th>Dosis inicio (mg)</th>
+                            <th>Dosis diaria (mg)</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Digoxina</td>
+                        <td>0,75-1,5 mg/día</td>
+                        <td>0,25 mg/día</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card"  ng-if="diureticos == true" ng-include src="'templates/calculadoras/04/ICFEr/diureticos.html'"></div>
+
+            <div class="card"  ng-if="dai == true" ng-include src="'templates/calculadoras/04/ICFEr/dai.html'"></div>
+
+
+        </div>
+
+        <div class="card" class="table-bordered">
+            <div class="button-bar" style="padding: 10px;">
+                <a  class="button button-calm button2" ui-sref="menu.04-01-03">CONTINUAR</a>
+            </div>
+        </div>
+
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+
+    </ion-content>
+
+
+</ion-view>
+

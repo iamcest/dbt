@@ -1,0 +1,254 @@
+
+
+<ion-view title="Objetivo y control global" id="page7">
+
+
+    <ion-content padding="false" class="has-header" style="background-color:  #EEEEEE;" ng-controller="testCtrl">
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+
+        <div class="titulo-cal" style="text-align: center">Cálculo de la dosis en la terapia bolo-basal</div>
+
+
+        <div class="card" style="margin: 10px;">
+            <div class="item item-divider item-icon-left">
+                <i class="icon ion-ios-help-outline"></i>
+                Consultas
+            </div>
+            <div ng-controller="modalesVentanas" ng-click="openModal('figura-3-4')"class="item item-text-wrap">
+                Cálculo de la dosis en la terapia bolo-basal
+            </div>
+        </div>
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+
+        <form>
+            <div class="card">
+                <div class="item item-divider " style="text-align: center !important;">
+                    Calculadora
+                </div>
+
+                <div class="item item-input-inset">
+                    <label class="item-input-wrapper" style="text-align: center !important;">
+                        <input type="number" ng-model="f3_4_kg" placeholder="Peso del paciente (Kg.)"  style="width: 100% !important; text-align: center">
+                    </label>
+                </div>
+                <div class="item item-divider " style="text-align: center !important; background-color:  #ffffff">
+                    Glucemia
+                </div>
+                <ul class="list" style="margin-bottom: 0px;">
+                    <li class="item item-toggle item-checkbox1">
+                        < 150 mg/dl: 0,3 UI/kg/día
+                        <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="f3_4_1" ng-change="updateStorage(); cf3_4_1()">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+                    </li>
+                    <li class="item item-toggle item-checkbox1">
+                        150-200 mg/dl: 0,4 UI/kg/día
+                        <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="f3_4_2" ng-change="updateStorage(); cf3_4_2()">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+                    </li>
+                    <li class="item item-toggle item-checkbox1">
+                        > 200 mg/dl: 0,5 UI/kg/día
+                        <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="f3_4_3" ng-change="updateStorage(); cf3_4_3()">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card" style="margin: 10px;" ng-show="resultado == 'ok'">
+                <div class="item item-divider item-icon-left">
+                    <i class="icon ion-ios-help-outline"></i>
+                    Resultados
+                </div>
+                <ul class="list">
+                    <li class="item" style="text-align: center">
+                        Insulina Basal = <b>{{resultadoBasal}} UI</b>
+                    </li>
+                    <li class="item" style="text-align: center" ng-controller="leyendaCtrl">
+                        Insulina Bolus total = <b>{{resultadoBolus}} UI</b> <a ng-click="openModal('o')"><sup><i class="icon ion-help-circled"></i></sup></a><br><br>
+                        - Desayuno = <b>{{desayuno}} UI</b><br>
+                        - Comida = <b>{{comida}} UI</b><br>
+                        - Cena = <b>{{cena}} UI</b>
+                    </li>
+                    <li class="item" style="text-align: center; margin-left: 0px; margin-right: 0px;">
+                        Pautas de corrección de insulina<br><br>
+                        
+                        <div id="calculadora">
+                            <table  class="table table-bordered table-striped" style="text-align:  left; border: 1px; width: 100%" ng-if="f3_4_kg < 60">
+                                <tbody>
+                                <thead style="background-color: #A72000; color: #EEEEEE;">
+                                    <tr>
+                                        <th style="width: 50%;">Glucemia (mg/dl)</th>
+                                        <th>Pauta A<br>
+                                            < 40 UI/día o<br>
+                                            < 60 kg
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;"><80</td>
+                                    <td>-1</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">80-129</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">130-149</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">150-199</td>
+                                    <td>+1</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">200-249</td>
+                                    <td>+2</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">250-299</td>
+                                    <td>+3</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">300-349</td>
+                                    <td>+4</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">>349</td>
+                                    <td>+5</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!-- -->
+                            <table  class="table table-bordered table-striped" style="text-align:  left; border: 1px; width: 100%" ng-if="f3_4_kg >= 60 && f3_4_kg <= 90">
+                                <tbody>
+                                <thead style="background-color: #A72000; color: #EEEEEE;">
+                                    <tr>
+                                        <th style="width: 50%;">Glucemia (mg/dl)</th>
+                                        <th>Pauta B<br>
+                                            < 40-80 UI/día o<br>
+                                            60-90 kg
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;"><80</td>
+                                    <td>-1</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">80-129</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">130-149</td>
+                                    <td>+1</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">150-199</td>
+                                    <td>+1</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">200-249</td>
+                                    <td>+3</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">250-299</td>
+                                    <td>+5</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">300-349</td>
+                                    <td>+7</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">>349</td>
+                                    <td>+8</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!-- -->
+                            <table  class="table table-bordered table-striped" style="text-align:  left; border: 1px; width: 100%" ng-if="f3_4_kg > 90">
+                                <tbody>
+                                <thead style="background-color: #A72000; color: #EEEEEE;">
+                                    <tr>
+                                        <th style="width: 50%;">Glucemia (mg/dl)</th>
+                                        <th>Pauta C<br>
+                                            > 80 UI/día o<br>
+                                            > 90 kg
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;"><80</td>
+                                    <td>-2</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">80-129</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">130-149</td>
+                                    <td>+1</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">150-199</td>
+                                    <td>+2</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">200-249</td>
+                                    <td>+4</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">250-299</td>
+                                    <td>+7</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">300-349</td>
+                                    <td>+10</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A72000; color: #EEEEEE;">>349</td>
+                                    <td>+12</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+
+            <div class="card" class="table-bordered">
+                <div class="button-bar" style="padding: 10px;">
+                    <a  class="button button-calm button2" ng-click="f3_4_calcular(); recalcular()">CALCULAR</a>
+                </div>
+            </div>
+
+            <div class="card" class="table-bordered">
+                <div class="button-bar" style="padding: 10px;">
+                    <a  class="button button-assertive button2" ng-click="resetCalc(); recalcular()" style="background-color:  darkorange !important;">RESET</a>
+                </div>
+            </div> 
+
+
+        </form>
+
+    </ion-content>
+
+
+</ion-view>
