@@ -20,7 +20,7 @@
             </ion-list>
 
             <div class="spacer" style="height: 10px;"></div>
-            <a id="login-button6" style="font-size: 14px; margin-bottom: 0px; margin-top: 0px;" class="button button-stable  button-block button-clear" a onclick="window.open('https://www.diabetappsec.com/templates/terminos.html', '_blank', 'location=yes')">Términos y condiciones</a>
+            <a id="login-button6" style="font-size: 14px; margin-bottom: 0px; margin-top: 0px;" class="button button-stable  button-block button-clear"  ng-controller="vademecumCtrl" ng-click="GotoLink('https://www.diabetappsec.com/templates/terminos.html')" >Términos y condiciones</a>
 
             <div class="spacer" style="height: 0px; "></div>
 
@@ -39,7 +39,7 @@
             <a id="login-button5" class="boton-login" ng-click="entrar()" ng-show="toggleModel.value1">Acceder</a>
             <a id="login-button5" class="boton-login" style="opacity: 0.3;" ng-hide="toggleModel.value1">Acceder</a>
 
-            <a id="login-button6" style="font-size: 14px; margin-bottom: 0px; margin-top: 0px;" class="button button-stable  button-block button-clear"  onclick="window.open('http://socios.secardiologia.es/reset/', '_blank', 'location=yes')">He olvidado mi contraseña</a>
+            <a id="login-button6" style="font-size: 14px; margin-bottom: 0px; margin-top: 0px;" class="button button-stable  button-block button-clear"  ng-controller="vademecumCtrl" ng-click="GotoLink('http://socios.secardiologia.es/reset/')" >He olvidado mi contraseña</a>
 
 
             <div class="spacer" style="height: 0px;"></div>
@@ -59,7 +59,7 @@
                     </label>
                 </ion-list>
                 <div class="spacer" style="height: 10px;"></div>
-                <a id="login-button6" style="font-size: 14px; color: white; margin-bottom: 0px; margin-top: 0px;" class="button button-stable  button-block button-clear" onclick="window.open('https://www.diabetappsec.com/templates/terminos.html', '_blank', 'location=yes')">Términos y condiciones</a>
+                <a id="login-button6" style="font-size: 14px; color: white; margin-bottom: 0px; margin-top: 0px;" class="button button-stable  button-block button-clear" ng-controller="vademecumCtrl" ng-click="GotoLink('https://www.diabetappsec.com/templates/terminos.html')">Términos y condiciones</a>
 
                 <div class="spacer" style="height: 0px; "></div>
 

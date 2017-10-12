@@ -125,30 +125,40 @@ angular.module('app.controllers', [])
                         });
             };
         })
+        
+        /************** descativar login y seguridad ***************************************/
+        /* detecta si hay login en la home y redirige al inicio */
 
         /* detecta si hay login en la home y redirige al inicio */
         .controller('ProtectedController3', ['$scope', '$stateParams',
             function ($scope, $location, $ionicViewService, $state) {
+                /*
                 var user = window.localStorage['MM_Username'];
                 if (user !== "") {
                     window.location = "#/menu/home";
                     //alert('Sin acceso');
 
                 }
+                */
             }])
         /* detecta si hay login a la carga de cualquier página */
         .controller('ProtectedController', ['$scope', '$stateParams',
             function ($scope, $location, $ionicViewService, $state) {
+                /*
                 var user = window.localStorage['MM_Username'];
                 if (user === "" || user == undefined) {
                     //$state.go("login");
                     //alert('Sin acceso');
                     window.location = "#/login";
                 }
+                */
             }])
         /* detecta el cambio de estado del navegador para ver si está logeado */
         .controller('ProtectedController2', ['$rootScope', function ($rootScope) {
+                /*
+            }
                 $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams) {
+                   
                     //alert(toState.name);
                     var user = window.localStorage['MM_Username'];
                     if (user === "" || user == undefined) {
@@ -159,8 +169,8 @@ angular.module('app.controllers', [])
 
                 });
                 //alert("controller loaded");
-            }
-        ])
+                    */
+            }])
 
 
         .controller('homeCtrl', ['$scope', '$stateParams',
@@ -206,6 +216,8 @@ angular.module('app.controllers', [])
 
         .controller('loginCtrl', ['$scope', '$stateParams',
             function ($scope, $stateParams) {
+                /******* para desactivar LOGIN, borra esta línea en modo login *************/
+                window.location = "#/menu/home";
 
             }])
 
