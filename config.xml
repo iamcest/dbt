@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.euromedice.DIABETapp" version="1.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>DIABETapp</name>
+<widget id="com.euromedice.DIABETappSEC" version="1.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>DIABETappSEC</name>
     <description>
         Proceso asistencial simplificado de la diabetes en el paciente con enfermedad cardiovascular
     </description>
     <author email="francisco.rubiales@euromedice.net" href="https://www.secardiologia.es">
-        Sociedad Española de Cardiologia
+        Euromedice ediciones médicas SL
     </author>
     
     
