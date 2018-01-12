@@ -2199,6 +2199,18 @@ angular.module('app.controllers', [])
                         "enlace": "http://www.vademecum.es/medicamento-daonil_ficha_993"
                     }, {
                         "id": 6,
+                        "nombre": "EBYMECT",
+                        "company": "ESTEVE",
+                        "contenido": "<p><strong>EBYMECT Comp. recub. con película 5 mg/850 mg</strong></p><p><strong>Composici&oacute;n:</strong><br /> Por 1 comprimido: Dapagliflozina, 5 mg; Metformina, 850 mg<br><strong>env. con 56 comprimidos recubiertos con película</strong></p><ul><li>Aportaci&oacute;n reducida por el beneficiario</li><li><strong>Fi</strong>: Medicamento incluido en la financiaci&oacute;n del SNS</li></ul>",
+                        "enlace": "https://www.vademecum.es/medicamento-ebymect+comp.+recub.+con+pelicula+5+mg%2F850+mg_44871"
+                    }, {
+                        "id": 6,
+                        "nombre": "EDISTRIDE",
+                        "company": "ESTEVE",
+                        "contenido": "<p><strong>EDISTRIDE Comp. recub. con película 10 mg</strong></p><p><strong>Composici&oacute;n:</strong><br /> Por 1 comprimido:&nbsp;Dapagliflozina, 10.0 mg</p><ul><li>Aportaci&oacute;n reducida por el beneficiario</li><li><strong>Fi</strong>: Medicamento incluido en la financiaci&oacute;n del SNS</li></ul>",
+                        "enlace": "https://www.vademecum.es/medicamento-edistride_44872"
+                    }, {
+                        "id": 6,
                         "nombre": "EFFICIB",
                         "company": "ALMIRALL, S.A.",
                         "contenido": "<p><strong>EFFICIB&nbsp;Comp. recub. 50 mg/1000 mg</strong></p><p><strong>Composici&oacute;n:</strong><br /> Por 1 comprimido:&nbsp;Metformina hidrocloruro, 1000.0&nbsp;mg;&nbsp;&nbsp;Sitagliptina, 50.0&nbsp;mg</p><p>EFFICIB&nbsp;Comp. recub. 50 mg/1000 mg<br /> <strong>env. con 56 env con 112 comp</strong>&nbsp;</p><ul><li>Aportaci&oacute;n reducida por el beneficiario</li><li><strong>Fi</strong>: Medicamento incluido en la financiaci&oacute;n del SNS</li></ul>",
