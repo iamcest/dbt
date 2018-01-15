@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.euromedice.DIABETappSEC" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.euromedice.DIABETapp" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>DIABETapp</name>
     <description>
         Proceso asistencial simplificado de la diabetes en el paciente con enfermedad cardiovascular
     </description>
-    <author email="activas@ya.com" href="https://www.euromedice.net">
+    <author email="francisco.rubiales@euromedice.net" href="https://www.secardiologia.es">
         FUNDACION CASA DEL CORAZON
     </author>
     
