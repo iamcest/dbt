@@ -125,30 +125,40 @@ angular.module('app.controllers', [])
                         });
             };
         })
+        
+        /************** descativar login y seguridad ***************************************/
+        /* detecta si hay login en la home y redirige al inicio */
 
         /* detecta si hay login en la home y redirige al inicio */
         .controller('ProtectedController3', ['$scope', '$stateParams',
             function ($scope, $location, $ionicViewService, $state) {
+                /*
                 var user = window.localStorage['MM_Username'];
                 if (user !== "") {
                     window.location = "#/menu/home";
                     //alert('Sin acceso');
 
                 }
+                */
             }])
         /* detecta si hay login a la carga de cualquier página */
         .controller('ProtectedController', ['$scope', '$stateParams',
             function ($scope, $location, $ionicViewService, $state) {
+                /*
                 var user = window.localStorage['MM_Username'];
                 if (user === "" || user == undefined) {
                     //$state.go("login");
                     //alert('Sin acceso');
                     window.location = "#/login";
                 }
+                */
             }])
         /* detecta el cambio de estado del navegador para ver si está logeado */
         .controller('ProtectedController2', ['$rootScope', function ($rootScope) {
+                /*
+            }
                 $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams) {
+                   
                     //alert(toState.name);
                     var user = window.localStorage['MM_Username'];
                     if (user === "" || user == undefined) {
@@ -159,8 +169,8 @@ angular.module('app.controllers', [])
 
                 });
                 //alert("controller loaded");
-            }
-        ])
+                    */
+            }])
 
 
         .controller('homeCtrl', ['$scope', '$stateParams',
@@ -206,6 +216,8 @@ angular.module('app.controllers', [])
 
         .controller('loginCtrl', ['$scope', '$stateParams',
             function ($scope, $stateParams) {
+                /******* para desactivar LOGIN, borra esta línea en modo login *************/
+                window.location = "#/menu/home";
 
             }])
 
@@ -2185,6 +2197,18 @@ angular.module('app.controllers', [])
                         "company": "SANOFI",
                         "contenido": "<p><strong>DAONIL&nbsp;Comp. 5 mg</strong></p><p><strong>Composici&oacute;n:</strong><br /> Por 1 comprimido:&nbsp;Giblencamida, 5.0&nbsp;mg</p><p>DAONIL&nbsp;Comp. 5 mg<br /> <strong>env. con 100 env con 30</strong></p>",
                         "enlace": "http://www.vademecum.es/medicamento-daonil_ficha_993"
+                    }, {
+                        "id": 6,
+                        "nombre": "EBYMECT",
+                        "company": "ESTEVE",
+                        "contenido": "<p><strong>EBYMECT Comp. recub. con película 5 mg/850 mg</strong></p><p><strong>Composici&oacute;n:</strong><br /> Por 1 comprimido: Dapagliflozina, 5 mg; Metformina, 850 mg<br><strong>env. con 56 comprimidos recubiertos con película</strong></p><ul><li>Aportaci&oacute;n reducida por el beneficiario</li><li><strong>Fi</strong>: Medicamento incluido en la financiaci&oacute;n del SNS</li></ul>",
+                        "enlace": "https://www.vademecum.es/medicamento-ebymect+comp.+recub.+con+pelicula+5+mg%2F850+mg_44871"
+                    }, {
+                        "id": 6,
+                        "nombre": "EDISTRIDE",
+                        "company": "ESTEVE",
+                        "contenido": "<p><strong>EDISTRIDE Comp. recub. con película 10 mg</strong></p><p><strong>Composici&oacute;n:</strong><br /> Por 1 comprimido:&nbsp;Dapagliflozina, 10.0 mg</p><ul><li>Aportaci&oacute;n reducida por el beneficiario</li><li><strong>Fi</strong>: Medicamento incluido en la financiaci&oacute;n del SNS</li></ul>",
+                        "enlace": "https://www.vademecum.es/medicamento-edistride_44872"
                     }, {
                         "id": 6,
                         "nombre": "EFFICIB",

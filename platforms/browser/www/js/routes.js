@@ -855,7 +855,8 @@ angular.module('app.routes', [])
                     
 
             // página de inicio por defecto (Login) IMPORTATE ¡¡¡¡¡ DEJAR ESTA LÍNEA AL FINAL
-            $urlRouterProvider.otherwise('/login');
+            //$urlRouterProvider.otherwise('/login');
+            $urlRouterProvider.otherwise('/menu/home');
 
 
         });
