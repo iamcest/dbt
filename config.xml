@@ -92,8 +92,8 @@
         <splash density="port-xxxhdpi" src="www/res/screen/android/splash-port-xxxhdpi.png" />
     </platform>
     <platform name="ios">
-        <!--
-        <preference name="fullscreen" value="true" />--><!-- all: hides the status bar at the top of the screen -->
+        
+        <preference name="fullscreen" value="true" /><!-- all: hides the status bar at the top of the screen -->
 
         <icon height="57" platform="ios" src="www/res/icon/ios/Icon-App-57x57@1x.png" width="57" />
         <icon height="114" platform="ios" src="www/res/icon/ios/Icon-App-57x57@2x.png" width="114" />
@@ -112,6 +112,7 @@
         <icon height="58" platform="ios" src="www/res/icon/ios/Icon-App-29x29@2x.png" width="58" />
         <icon height="87" platform="ios" src="www/res/icon/ios/Icon-App-29x29@3x.png" width="87" />
         <icon height="167" platform="ios" src="www/res/icon/ios/icon-83.5@2x.png" width="167" />
+        <icon height="1024" platform="ios" src="www/res/icon/ios/icon-1024.png" width="1024" />
         
         <splash height="1136" platform="ios" src="www/res/screen/ios/Default-568h@2x~iphone.png" width="640" />
         <splash height="1334" platform="ios" src="www/res/screen/ios/Default-667h.png" width="750" />
