@@ -11,12 +11,13 @@
         </ion-nav-bar>
         <ion-nav-view name="side-menu21"></ion-nav-view>
     </ion-side-menu-content>
-
     <ion-side-menu side="left" id="side-menu21" expose-aside-when="large" ng-controller="ProtectedController">
-        <div class="contenedor-logos">
+        <a href="https://dbt.iamcest.com/www/index.html">
+            <div class="contenedor-logos">
             <div class="spacer" style="width: 300px; height: 45px;"></div>
-            <div id="logo-login"><img src="img/logo-login.png"></div>
-            <div id="logo-login"><img src="img/logo-cardiologia-login.png"></div>
+            <div id="logo-login"><img src="img/logo.jpg" width="15%" /></div>
+            <div>App Diabetes</div>
+        </a>
         </div>
         <ion-content padding="false" class="side-menu-left has-header separacion">
             <ion-list id="menu-null">
@@ -24,7 +25,7 @@
                 <div class="contenedor-calc">
                     <a ui-sref="menu.01" menu-close=""><div class="calculadora-menu cal-1">Diagnóstico. Gestión integral</div></a>
                     <a ui-sref="menu.02-01" menu-close=""><div class="calculadora-menu cal-2">Objetivos y control global</div></a>
-                    <a ui-sref="menu.03-01" menu-close=""><div class="calculadora-menu cal-3">Tratamiento antidiabético</div></a>
+                    <a ui-sref="menu.03-01" menu-close=""><div class="calculadora-menu cal-3">Tratamiento</div></a>
                     <a ui-sref="menu.04-01" menu-close=""><div class="calculadora-menu cal-4">Situaciones especiales</div></a>
                     <button class="button button-small icon-left ion-ios-refresh button-assertive" ng-controller="resetTodo" ng-click="showReset()"> LIMPIAR DATOS </button>
                 </div>
