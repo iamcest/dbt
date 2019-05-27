@@ -42,7 +42,7 @@ em,i{
     padding-bottom: 0px;
 }
 a {
-    color:  #A72000;
+    color:  #333333;
     text-decoration:  none;
 }
 .separacion {
@@ -224,14 +224,14 @@ a.boton-login{
 }
 /* home */
 .home {
-    width: 100%;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     margin-top: 10px;
 }
 .home img{
-    width: 90%;
+    width: auto;
 }
 .pie{
     width: auto;
@@ -240,7 +240,7 @@ a.boton-login{
     text-align: center;
 }
 .pie img{
-    width: 100%;
+    width: auto;
 }
 .toggle.toggle-calm input:checked + .track {
     border-color: #4cd964;
@@ -290,10 +290,10 @@ a.boton-login{
     border: 0px solid #000000;
 }
 .cal-1 {
-    background-color: #A83B00;
+    background-color: #0077cc;
 }
 .cal-2 {
-    background-color: #E63400;
+    background-color: #0077cc;
 }
 .cal-3 {
     background-color: #FF6233;
