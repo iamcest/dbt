@@ -3943,8 +3943,8 @@ a.subdued {
     .bar.bar-positive.bar-footer {
       background-image: linear-gradient(180deg, #0c60ee, #0c60ee 50%, transparent 50%); }
   .bar.bar-calm {
-    border-color: #B84E00;
-    background-color: #B84E00;
+    border-color: #0077cc;
+    background-color: #0077cc;
     background-image: linear-gradient(0deg, #0a9dc7, #0a9dc7 50%, transparent 50%);
     color: #fff; }
     .bar.bar-calm .title {
