@@ -2167,54 +2167,18 @@ angular.module('app.controllers', [])
                     window.open(url, '_system');
                 };
 
-                $scope.vademecumList = [{
+                $scope.vademecumList = [ {
                         "id": 1,
-                        "nombre": "ACARBOSA TARBIS Comp. 100 mg",
-                        "company": "TARBIS FARMA (FERRER GRUPO)",
-                        "contenido": "<p><strong>Composici&oacute;n:</strong><br /> Por 1 comprimido:&nbsp;Acarbosa&nbsp;, 100.0&nbsp;mg</p><p>*ACARBOSA TARBIS&nbsp;Comp. 100 mg<br /> <strong>env. con 100</strong></p><p>Aportaci&oacute;n reducida por el beneficiario</p><p><strong>Fi</strong>: Medicamento incluido en la financiaci&oacute;n del SNS</p>",
-                        "enlace": "https://www.vademecum.es/medicamento-acarbosa+tarbis_33243"
-                    }, {
-                        "id": 2,
                         "nombre": "AMARYL Comp. 2 mg",
                         "company": "SANOFI",
                         "contenido": "<p><strong>Composici&oacute;n:</strong><br /> Por 1 comprimido:&nbsp;Glimepirida, 2.0&nbsp;mg</p><p>AMARYL&nbsp;Comp. 2 mg<br /> <strong>env. con 30 y 120 comp</strong></p><p>*Aportaci&oacute;n reducida por el beneficiario</p><p><strong>Fi</strong>: Medicamento incluido en la financiaci&oacute;n del SNS</p><p>AMARYL&nbsp;Comp. 4 mg, envases de 30 y de 120 comp</p>",
                         "enlace": "https://www.vademecum.es/medicamento-amaryl_ficha_4933"
-                    }, {
-                        "id": 3,
-                        "nombre": "BYDUREON",
-                        "company": "ASTRAZENECA",
-                        "contenido": "<p><strong>BYDUREON&nbsp;Polvo disolv. sol. iny. lib. prolong. 2 mg jeringa</strong></p><p><strong>Composici&oacute;n:</strong><br /> Por 1 vial inyecci&oacute;n:&nbsp;Exenatida, 2.0&nbsp;mg</p><p>BYDUREON&nbsp;Polvo disolv. sol. iny. lib. prolong. 2 mg jeringa<br /> <strong>env. con 4 viales + 4 jeringas</strong></p><p>*Aportaci&oacute;n reducida por el beneficiario</p><p><strong>Fi</strong>: Medicamento incluido en la financiaci&oacute;n del SNS</p><p><strong>Vi</strong>: Medicamento que precisa Visado de Inspecci&oacute;n</p><p>BYDUREON&nbsp;Polvo disolv. sol. iny. lib. prolong. 2 mg pluma<br /> <strong>env. con 4 plumas precargadas</strong></p>",
-                        "enlace": "https://www.vademecum.es/medicamento-bydureon_38096"
-                    }, {
-                        "id": 4,
-                        "nombre": "BYETTA",
-                        "company": "ASTRAZENECA",
-                        "contenido": "<p><strong>BYETTA&nbsp;Sol. iny. pluma precargada 10 mcg</strong></p><p><strong>Composici&oacute;n:</strong><br /> Por 1 dosis inyectable en envase multidosis: Exenatida, 10.0&nbsp;mcg</p><p>BYETTA&nbsp;Sol. iny. pluma precargada 10 mcg<br /> <strong>env. con 1 pluma precargada de 60 dosis</strong></p><p>*Aportaci&oacute;n reducida por el beneficiario</p><p><strong>Fi</strong>: Medicamento incluido en la financiaci&oacute;n del SNS</p><p><strong>Vi</strong>: Medicamento que precisa Visado de Inspecci&oacute;n</p><p>BYETTA&nbsp;Sol. iny. pluma precargada 5 mcg<br /> <strong>env. con 1 pluma precargada de 60 dosis</strong></p>",
-                        "enlace": "https://www.vademecum.es/medicamento-byetta_ficha_31069"
                     }, {
                         "id": 5,
                         "nombre": "DAONIL",
                         "company": "SANOFI",
                         "contenido": "<p><strong>DAONIL&nbsp;Comp. 5 mg</strong></p><p><strong>Composici&oacute;n:</strong><br /> Por 1 comprimido:&nbsp;Giblencamida, 5.0&nbsp;mg</p><p>DAONIL&nbsp;Comp. 5 mg<br /> <strong>env. con 100 env con 30</strong></p>",
                         "enlace": "http://www.vademecum.es/medicamento-daonil_ficha_993"
-                    }, {
-                        "id": 6,
-                        "nombre": "EBYMECT",
-                        "company": "ESTEVE",
-                        "contenido": "<p><strong>EBYMECT Comp. recub. con película 5 mg/850 mg</strong></p><p><strong>Composici&oacute;n:</strong><br /> Por 1 comprimido: Dapagliflozina, 5 mg; Metformina, 850 mg<br><strong>env. con 56 comprimidos recubiertos con película</strong></p><ul><li>Aportaci&oacute;n reducida por el beneficiario</li><li><strong>Fi</strong>: Medicamento incluido en la financiaci&oacute;n del SNS</li></ul>",
-                        "enlace": "https://www.vademecum.es/medicamento-ebymect+comp.+recub.+con+pelicula+5+mg%2F850+mg_44871"
-                    }, {
-                        "id": 6,
-                        "nombre": "EDISTRIDE",
-                        "company": "ESTEVE",
-                        "contenido": "<p><strong>EDISTRIDE Comp. recub. con película 10 mg</strong></p><p><strong>Composici&oacute;n:</strong><br /> Por 1 comprimido:&nbsp;Dapagliflozina, 10.0 mg</p><ul><li>Aportaci&oacute;n reducida por el beneficiario</li><li><strong>Fi</strong>: Medicamento incluido en la financiaci&oacute;n del SNS</li></ul>",
-                        "enlace": "https://www.vademecum.es/medicamento-edistride_44872"
-                    }, {
-                        "id": 6,
-                        "nombre": "EFFICIB",
-                        "company": "ALMIRALL, S.A.",
-                        "contenido": "<p><strong>EFFICIB&nbsp;Comp. recub. 50 mg/1000 mg</strong></p><p><strong>Composici&oacute;n:</strong><br /> Por 1 comprimido:&nbsp;Metformina hidrocloruro, 1000.0&nbsp;mg;&nbsp;&nbsp;Sitagliptina, 50.0&nbsp;mg</p><p>EFFICIB&nbsp;Comp. recub. 50 mg/1000 mg<br /> <strong>env. con 56 env con 112 comp</strong>&nbsp;</p><ul><li>Aportaci&oacute;n reducida por el beneficiario</li><li><strong>Fi</strong>: Medicamento incluido en la financiaci&oacute;n del SNS</li></ul>",
-                        "enlace": "http://www.vademecum.es/medicamento-efficib_ficha_32770"
                     }, {
                         "id": 7,
                         "nombre": "FORXIGA",
@@ -2234,65 +2198,17 @@ angular.module('app.controllers', [])
                         "contenido": "<p>JARDIANCE&nbsp;Comp. recub. con pel&iacute;cula 10 mg</p><p>Composici&oacute;n:<br /> Por 1 comprimido:&nbsp;Empagliflozina&nbsp;, 10.0&nbsp;mg/25 mg</p><p>JARDIANCE&nbsp;Comp. recub. con pel&iacute;cula 10 mg/ comp 25 mg<br /> <strong>env. con 30</strong></p><p>*Aportaci&oacute;n reducida por el beneficiario</p><p>Fi: Medicamento incluido en la financiaci&oacute;n del SNS</p><p>&nbsp;</p>",
                         "enlace": "https://www.vademecum.es/medicamento-jardiance_ficha_43682"
                     }, {
-                        "id": 10,
-                        "nombre": "JENTADUETO",
-                        "company": "BOEHRINGER INGELHEIM ESPAÑA",
-                        "contenido": "<p>JENTADUETO&nbsp;Comp. recub. con pel&iacute;cula 2,5/1000 mg</p><p>Composici&oacute;n:<br /> Por 1 comprimido:&nbsp;Linagliptina, 2.5&nbsp;mg;&nbsp;Metformina hidrocloruro, 1000.0&nbsp;mg</p><p>JENTADUETO&nbsp;Comp. recub. con pel&iacute;cula 2,5/1000 mg/ 2.5/850 mg<br /> <strong>env. con 60</strong></p><p>*Aportaci&oacute;n reducida por el beneficiario</p><p>Fi: Medicamento incluido en la financiaci&oacute;n del SNS</p><p>&nbsp;</p>",
-                        "enlace": "https://www.vademecum.es/medicamento-jentadueto_ficha_40320"
-                    }, {
-                        "id": 11,
-                        "nombre": "KOMBOGLYZE",
-                        "company": "ASTRAZENECA",
-                        "contenido": "<p>KOMBOGLYZE&nbsp;Comp. recub. con pel&iacute;cula 2,5/1000 mg</p><p>Composici&oacute;n:<br /> Por 1 comprimido:&nbsp;Metformina hidrocloruro, 1000.0&nbsp;mg;&nbsp;&nbsp;Saxagliptina, 2.5&nbsp;mg</p><p>KOMBOGLYZE&nbsp;Comp. recub. con pel&iacute;cula 2,5/1000 mg / 2.5/850mg<br /> <strong>env. con 56</strong></p><p>*Aportaci&oacute;n reducida por el beneficiario</p><p>Fi: Medicamento incluido en la financiaci&oacute;n del SNS</p><p>&nbsp;</p>",
-                        "enlace": "https://www.vademecum.es/medicamento-komboglyze_ficha_39041"
-                    }, {
                         "id": 12,
                         "nombre": "METFORMINA",
                         "company": "(Varios)",
                         "contenido": "<ul><li>METFORMINA ADLER-APOTHEKE&nbsp;Comp. recub. con pel&iacute;cula 1000 mg</li><li>METFORMINA ADLER-APOTHEKE&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA ALMUS EFG&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA APOTEX&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA AUROBINDO&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA AUROVITAS SPAIN&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA BLUEFISH&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA CINFA EFG&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA COMBIX&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA KERN PHARMA&nbsp;Comp. recub. con pel&iacute;cula 1000 mg</li><li>METFORMINA KERN PHARMA EFG&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA MYLAN&nbsp;Comp. recub. con pel&iacute;cula 1000 mg</li><li>METFORMINA MYLAN PHARMACEUTICALS&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA PENSA&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA QUALIGEN&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA RATIOPHARM&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA SANDOZ&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA STADA&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA TARBIS&nbsp;Comp. recub. con pel&iacute;cula 1000 mg</li><li>METFORMINA TARBIS&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA TEVA&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li><li>METFORMINA VIR&nbsp;Comp. recub. con pel&iacute;cula 850 mg</li></ul>",
                         "enlace": "https://www.vademecum.es/buscar?q=metformina"
                     }, {
-                        "id": 12,
-                        "nombre": "ONGLYZA",
-                        "company": "ASTRAZENECA",
-                        "contenido": "<p>ONGLYZA&nbsp;Comp. recub. con pel&iacute;cula 2,5 mg</p><p>Composici&oacute;n:<br /> Por 1 comprimido:&nbsp;Saxagliptina hidrocloruro, 2.5&nbsp;mg</p><p>ONGLYZA&nbsp;Comp. recub. con pel&iacute;cula 2,5 mg-5mg<br /> <strong>env. con 28</strong></p><p>*Aportaci&oacute;n reducida por el beneficiario</p><p>Fi: Medicamento incluido en la financiaci&oacute;n del SNS</p><p>GLUSTIN&nbsp;Comp. 15 mg<br />GLUSTIN&nbsp;Comp. 30 mg</p>",
-                        "enlace": "https://www.vademecum.es/medicamento-onglyza_ficha_37288"
-                    }, {
-                        "id": 13,
-                        "nombre": "PRANDIN",
-                        "company": "LABORATORIOS MENARINI (MENARINI GRUPO)",
-                        "contenido": "<p>PRANDIN&nbsp;Comp. 0,5 mg</p><p>Composici&oacute;n:<br /> Por 1 comprimido:&nbsp;Repaglinida, 0.5&nbsp;mg- 1-2 mg</p><p>PRANDIN&nbsp;Comp. 0,5 mg-1mg-2mg</p><p>*Aportaci&oacute;n reducida por el beneficiario</p><p>Fi: Medicamento incluido en la financiaci&oacute;n del SNS</p>",
-                        "enlace": "https://www.vademecum.es/medicamento-prandin_ficha_26375"
-                    }, {
-                        "id": 14,
-                        "nombre": "REPAGLINIDA RATIOPHARM",
-                        "company": "RATIOPHARM ESPAÑA",
-                        "contenido": "<p>REPAGLINIDA RATIOPHARM&nbsp;Comp. 0,5 mg</p><p>Composici&oacute;n:<br /> Por 1 comprimido:&nbsp;Repaglinida, 0.5&nbsp;mg-1-2mg</p><p>REPAGLINIDA RATIOPHARM&nbsp;Comp. 0,5 mg-1-2 mg<br /> <strong>env. con 90 (bl&iacute;ster Al/Al)</strong><br />EFG: Medicamento gen&eacute;rico</p><p>*Aportaci&oacute;n reducida por el beneficiario</p><p>Fi: Medicamento incluido en la financiaci&oacute;n del SNS&nbsp;</p>",
-                        "enlace": "https://www.vademecum.es/medicamento-repaglinida+ratiopharm_35847"
-                    }, {
-                        "id": 15,
-                        "nombre": "SYNJARDY",
-                        "company": "BOEHRINGER INGELHEIM ESPAÑA",
-                        "contenido": "<p>SYNJARDY&nbsp;Comp. recub. con pel&iacute;cula 12,5 mg/1000 mg</p><p>Composici&oacute;n:<br /> Por 1 comprimido:&nbsp;Empagliflozina&nbsp;, 12.5&nbsp;mg ;&nbsp;Metformina hidrocloruro&nbsp;, 1000.0&nbsp;mg</p><p>SYNJARDY&nbsp;Comp. recub. con pel&iacute;cula 12,5 mg/1000 mg/ 5mg/1000<br /> <strong>env. con 60</strong></p><p>*Aportaci&oacute;n reducida por el beneficiario</p><p>Fi: Medicamento incluido en la financiaci&oacute;n del SNS</p>",
-                        "enlace": "https://www.vademecum.es/medicamento-synjardy_ficha_44738"
-                    }, {
-                        "id": 16,
-                        "nombre": "TESAVEL",
-                        "company": "ALMIRALL, S.A.",
-                        "contenido": "<p>TESAVEL&nbsp;Comp. recub. con pel&iacute;cula 100 mg</p><p>Composici&oacute;n:<br /> Por 1 comprimido:&nbsp;Sitagliptina&nbsp;, 100.0&nbsp;mg/25/50mg</p><p>TESAVEL&nbsp;Comp. recub. con pel&iacute;cula 100 mg /25/50 mg<br /> <strong>env. con 28</strong></p><p>*Aportaci&oacute;n reducida por el beneficiario</p><p>Fi: Medicamento incluido en la financiaci&oacute;n del SNS</p>",
-                        "enlace": "https://www.vademecum.es/medicamento-tesavel_ficha_32296"
-                    }, {
                         "id": 17,
-                        "nombre": "TRAJENTA",
-                        "company": "BOEHRINGER INGELHEIM ESPAÑA",
+                        "nombre": "TRAYENTA",
+                        "company": "BOEHRINGER INGELHEIM ARGENTINA",
                         "contenido": "<p>TRAJENTA&nbsp;Comp. recub. con pel&iacute;cula 5 mg</p><p>Composici&oacute;n:<br /> Por 1 comprimido:&nbsp;Linagliptina, 5.0&nbsp;mg</p><p>TRAJENTA&nbsp;Comp. recub. con pel&iacute;cula 5 mg<br /> <strong>env. con 30</strong></p><p>*Aportaci&oacute;n reducida por el beneficiario</p><p>Fi: Medicamento incluido en la financiaci&oacute;n del SNS</p>",
                         "enlace": "https://www.vademecum.es/medicamento-trajenta_ficha_38090"
-                    }, {
-                        "id": 18,
-                        "nombre": "TRULICITY",
-                        "company": "LILLY",
-                        "contenido": "<p>TRULICITY&nbsp;Sol. iny. en pluma precargada 0,75 mg</p><p>Composici&oacute;n:<br /> Por 1 jeringa precargada:&nbsp;Dulaglutida&nbsp;, 0.75&nbsp;mg/1.5 mg</p><p>TRULICITY&nbsp;Sol. iny. en pluma precargada 0,75 mg/1.5mg<br /> <strong>env. con 4 plumas precargadas</strong></p><p>*Aportaci&oacute;n reducida por el beneficiario</p><p>Fi: Medicamento financiado s&oacute;lo para determinadas indicaciones</p><p>&nbsp;</p>",
-                        "enlace": "https://www.vademecum.es/medicamento-trulicity_ficha_44249"
                     }, {
                         "id": 19,
                         "nombre": "VOKANAMET",
